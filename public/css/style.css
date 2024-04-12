@@ -13,19 +13,23 @@
 
 /*HEADER*/
 .header-operator {
-  border-radius: 12px !important;
+  border-radius: 14px !important;
+}
+.header-operator h1 {
+  margin-left: 1.1vw !important;
 }
 .logo-header{
   max-height: 4vw;
 }
-div#current-time { /* JAM ACTUAL :*/
+div#current-time { /* JAM ACTUAL */
   background: #b4e9d7;
   color: #000;
   font-weight: bold;
-  font-size: 6rem;
+  font-size: 5vw;
   padding: 0px 10px;
   border-radius: 20px;
   border: 2px solid #000000;
+  line-height: 1.3;
 }
 div#current-time span { /* JAM ACTUAL */
   display: inline-block;
