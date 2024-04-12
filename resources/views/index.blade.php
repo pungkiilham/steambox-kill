@@ -148,7 +148,7 @@ function countdown() {
             element.textContent = timeString;
 
             // Memeriksa apakah sisa waktu kurang dari 30 menit dan menambahkan kelas 'alert' pada elemen <tr> jika perlu
-            if ((hours === 0 && minutes < 30) || minutes <= 0 && seconds <= 0) {
+            if ((hours === 0 && minutes < 30) || hours <= 0 && minutes <= 0 && seconds <= 0) {
                 element.parentNode.classList.add('alert');
             } else {
                 element.parentNode.classList.remove('alert');

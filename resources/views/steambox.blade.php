@@ -21,35 +21,36 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-            </div>
-
             <!-- Content Row -->
             <div class="row">
 
                 <!-- Earnings (Monthly) Card Example -->
                 <div class="col mb-4">
-                    <div class="card border-left-primary shadow h-100 py-2">
-                        <div class="card-body">
-                            <div class="row no-gutters align-items-center">
-                                <div class="col mr-2">
-                                <input type="checkbox" id="checkbox1">
-<label for="checkbox1" id="label1">Option <span class="order"></span></label><br>
-<input type="checkbox" id="checkbox2">
-<label for="checkbox2" id="label2">Option <span class="order"></span></label><br>
-<input type="checkbox" id="checkbox3">
-<label for="checkbox3" id="label3">Option <span class="order"></span></label><br>
-<input type="checkbox" id="checkbox4">
-<label for="checkbox4" id="label4">Option <span class="order"></span></label><br>
-
-
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center legend-box">
+                                    <div class="legend-steambox">
+                                        <input type="checkbox" id="checkbox1">
+                                        <label for="checkbox1" id="label1" class="legend-title"><span class="color-legend" style="background:#fff"></span>Belum terisi <span class="order"></span></label>
+                                    </div>
+                                    <div class="legend-steambox">
+                                        <input type="checkbox" id="checkbox2">
+                                        <label for="checkbox2" id="label2" class="legend-title"><span class="color-legend" style="background:#ecff0f"></span>Pemanasan <span class="order"></span></label>
+                                    </div>
+                                    <div class="legend-steambox">
+                                        <input type="checkbox" id="checkbox3">
+                                        <label for="checkbox3" id="label3" class="legend-title"><span class="color-legend" style="background:#2be172"></span>Pemasakan <span class="order"></span></label>
+                                    </div>
+                                    <div class="legend-steambox">
+                                        <input type="checkbox" id="checkbox4">
+                                        <label for="checkbox4" id="label4" class="legend-title"><span class="color-legend" style="background:#39e8f8"></span>15 Menit pemasakan berakhir <span class="order"></span></label>
+                                    </div>
+                                    <div class="legend-steambox">
+                                        <input type="checkbox" id="checkbox5">
+                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#e10200"></span>COMM Error <span class="order"></span></label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

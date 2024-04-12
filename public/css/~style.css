@@ -13,7 +13,13 @@
 
 /*HEADER*/
 .header-operator {
-  border-radius: 12px !important;
+  border-radius: 0.8vw !important;
+  margin-top: 1.58vw !important;
+  margin-bottom: 1.58vw !important;
+  padding: 0.5vw 0.5vw !important;
+}
+.header-operator h1 {
+  margin-left: 0.6vw !important;
 }
 .logo-header{
   max-height: 4vw;
@@ -37,7 +43,7 @@ div#current-time span { /* JAM ACTUAL */
   margin: 0 0px;
   position: relative;
   top: 2px;
-  min-width: 6.9vw;
+  min-width: 3.9vw;
 }
 table.table-data-operator td.nama-resep {
   font-size: 1.4vw;
@@ -59,8 +65,9 @@ table.table-data-operator td{
   border-bottom: 1px solid #aaa;
   background: #fff;
   line-height: 1.05;
+  padding: 0.78vw;
 }
-table.table-data-operator { /* JAM KECIL */
+table.table-data-operator {
   font-weight: bold;
   color: #000;
   margin-bottom: 0;
@@ -80,7 +87,7 @@ table.table-data-operator thead th {
 }
 .table-wrapper {
   background: #fff;
-  border-radius: 14px;
+  border-radius: 0.8vw !important;
   overflow: hidden;
   border: 1px solid #aaa;
 }
