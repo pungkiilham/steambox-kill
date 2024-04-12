@@ -59,13 +59,13 @@
                                 <tr>
                                     <td>29</td>
                                     <td class="nama-resep">KCSURYA KNG LBR</td>
-                                    <td>16:30:00</td>
+                                    <td>23:10:00</td>
                                     <td class="countdown" data-finish-time="23:10:00"></td>
                                 </tr>
                                 <tr>
                                     <td>29</td>
                                     <td class="nama-resep">KCSURYA KNG LBR</td>
-                                    <td>16:30:00</td>
+                                    <td>23:50:00</td>
                                     <td class="countdown" data-finish-time="23:50:00"></td>
                                 </tr>
                                 

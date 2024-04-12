@@ -91,13 +91,19 @@ table.table-data-operator thead th {
 table.table-data-operator thead th:last-child {
   border-right: 0px solid #aaa;
 }
-.alert { /* JAM BESAR */
+table.table-data-operator tr.alert.alert:nth-child(1),
+table.table-data-operator tr.alert.alert:nth-child(2),
+table.table-data-operator tr.alert.alert:nth-child(3) { /* JAM BESAR */
   font-size: 6.6vw;
 }
-.alert td.nama-resep{
+table.table-data-operator tr.alert.alert:nth-child(1) td.nama-resep,
+table.table-data-operator tr.alert.alert:nth-child(2) td.nama-resep,
+table.table-data-operator tr.alert.alert:nth-child(3) td.nama-resep{
   font-size: 2.7vw !important;
 }
-.alert .countdown{
+table.table-data-operator tr.alert.alert:nth-child(1) .countdown,
+table.table-data-operator tr.alert.alert:nth-child(2) .countdown,
+table.table-data-operator tr.alert.alert:nth-child(3) .countdown{
   color: #f00;
 }
 
