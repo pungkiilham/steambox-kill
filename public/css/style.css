@@ -1,0 +1,77 @@
+/*SIDEBAR*/
+.sidebar-brand-text img {
+  max-height: 45px;
+}
+
+
+/*HEADER*/
+.header-operator {
+  border-radius: 12px !important;
+}
+.logo-header{
+  max-height: 45px;
+}
+div#current-time {
+  background: #b4e9d7;
+  color: #000;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 0px 10px;
+  border-radius: 8px;
+  border: 1px solid #3eabb1;
+}
+div#current-time span {
+  width: 46px;
+  display: inline-block;
+  text-align: center;
+}
+table.table-data-operator td.nama-resep {
+  font-size: 13pt;
+  font-weight: 500;
+}
+table.table-data-operator th {
+  font-weight: 500;
+  font-size: 12pt;
+}
+table.table-data-operator tr:last-child td{
+  border-bottom: 0;
+}
+table.table-data-operator td:last-child{
+  border-right: 0px solid #aaa;
+}
+table.table-data-operator td{
+  vertical-align: middle;
+  border-right: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  background: #fff;
+}
+table.table-data-operator {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0;
+  font-size: 25pt;
+}
+table.table-data-operator thead th {
+  background: #002f6d;
+  color: #fff;
+  border-right: 1px solid #aaa;
+  border-bottom: 0;
+}
+.table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #aaa;
+}
+table.table-data-operator thead th:last-child {
+  border-right: 0px solid #aaa;
+}
+.alert {
+  font-size: 42pt;
+}
+.alert td.nama-resep{
+  font-size: 15pt !important;
+}
+.alert .countdown{
+  color: #f00;
+}
