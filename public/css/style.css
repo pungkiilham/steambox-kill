@@ -9,7 +9,7 @@
   border-radius: 12px !important;
 }
 .logo-header{
-  max-height: 45px;
+  max-height: 3vw;
 }
 div#current-time {
   background: #b4e9d7;
@@ -21,17 +21,23 @@ div#current-time {
   border: 1px solid #3eabb1;
 }
 div#current-time span {
-  width: 46px;
   display: inline-block;
   text-align: center;
+  font-size: 2.9vw;
+  line-height: 1.2;
+  margin-bottom: -10px !important;
+  margin: 0 0px;
+  position: relative;
+  top: 2px;
+  min-width: 3.9vw;
 }
 table.table-data-operator td.nama-resep {
-  font-size: 13pt;
+  font-size: 1.4vw;
   font-weight: 500;
 }
 table.table-data-operator th {
   font-weight: 500;
-  font-size: 12pt;
+  font-size: 1.1vw;
 }
 table.table-data-operator tr:last-child td{
   border-bottom: 0;
@@ -44,15 +50,21 @@ table.table-data-operator td{
   border-right: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
   background: #fff;
+  line-height: 1.05;
 }
 table.table-data-operator {
   font-weight: bold;
   color: #000;
   margin-bottom: 0;
-  font-size: 25pt;
+  font-size: 3.8vw;
+  margin-left: -1px;
+  width: calc(100% + 1px);
 }
+
+
 table.table-data-operator thead th {
   background: #002f6d;
+  border-top: 0;
   color: #fff;
   border-right: 1px solid #aaa;
   border-bottom: 0;
@@ -67,10 +79,10 @@ table.table-data-operator thead th:last-child {
   border-right: 0px solid #aaa;
 }
 .alert {
-  font-size: 42pt;
+  font-size: 5.6vw;
 }
 .alert td.nama-resep{
-  font-size: 15pt !important;
+  font-size: 1.7vw !important;
 }
 .alert .countdown{
   color: #f00;
