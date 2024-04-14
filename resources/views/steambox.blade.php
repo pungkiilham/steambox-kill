@@ -1200,6 +1200,7 @@ checkboxes.forEach(function(checkbox, index) {
     });
 });
 
+$('#steambox-menu').addClass('active');
 
 </script>
 

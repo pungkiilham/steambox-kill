@@ -19,6 +19,8 @@
         <!-- Custom styles for this template-->
         <link href="{{ asset('css/sb-admin-2.css') }}" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        
+        <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     </head>
 
         

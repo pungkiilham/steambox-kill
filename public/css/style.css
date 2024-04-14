@@ -307,3 +307,286 @@ span.color-legend {
   border-radius: 15px;
   padding: 0px;
 }
+
+
+/*PEMASAKAN PAGE*/
+body#pemasakan-page .legend-box label {
+  padding: 5px 13px;
+}
+body#pemasakan-page .legend-box {
+  width: calc(100% - 120px);
+  justify-content: space-evenly;
+}
+.data-pemasakan th:last-child {
+  border-right: 0;
+}
+.data-pemasakan th {
+  background: #e1e9fe;
+  text-align: center;
+  font-weight: 500;
+  color: #000;
+  border-right: 1px solid #ccc;
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc !important;
+}
+.data-pemasakan td button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11pt;
+  margin-bottom: 10px;
+}
+.data-pemasakan td button:last-child {
+  margin-bottom: 0;
+}
+.data-pemasakan td:nth-child(2){
+  padding: 0 0px;
+}
+.btn-green,.btn-green:disabled{
+  background: #0dac38;
+  border-color: #0e9f35 !important;
+}
+.btn-green:hover,.btn-green:focus{
+  background: #0a942f !important;
+}
+.btn-yellow,.btn-yellow:disabled{
+  background: #fdaa02;
+  border-color: #df9706 !important;
+}
+.btn-yellow:hover,.btn-yellow:focus{
+  background: #e69a02 !important;
+}
+.btn-red,.btn-red:focus{
+  background: #f51007;
+  border-color: #e60c05 !important;
+}
+.btn-red:hover{
+  background-color:#e60c05 !important ;
+}
+.btn-blue,.btn-blue:focus{
+  background: #192ade;
+  border-color: #1222cc !important;
+}
+.btn-blue:hover{
+  background: #1222cc;
+}
+.status-stop {
+  font-size: 4rem;
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  padding: 15px 0 13px;
+  line-height: 1;
+}
+.maintenance-alert {
+  text-align: center;
+  color: #fe0000;
+  border-top: 1px solid #ccc;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  font-weight: 600;
+}
+.maintenance-status .status-stop {
+  background: #fe0000;
+}
+.maintenance-status .number-pemasakan{
+  color: #fe0000;
+}
+.data-pemasakan td{
+  vertical-align: middle;
+  border-right: 1px solid #ccc;
+  padding: 0;
+}
+.data-pemasakan td button span {
+  margin-left: 5px;
+  display: block;
+  font-size: 15pt;
+}
+.data-pemasakan td:last-child{
+  border-right: 0;
+  padding: 16px;
+}
+.data-pemasakan .card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.data-pemasakan table {
+  margin: 0;
+}
+.number-pemasakan {
+    color: #000;
+    font-size: 4.5rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+    padding: 4px 0;
+}
+.text-error{
+  color:#fe0000 !important;
+}
+.bg-pemanasan {
+  background: #ecff0f;
+}
+.bg-pemasakan{
+  background: #2be172;
+}
+.row.data-pemasakan table table tr:first-child td {
+  border-top: 0;
+}
+.row.data-pemasakan table table td {
+  padding: 2px 6px;
+  color: #000;
+}
+.text-green{
+  color: #2c9d7b;
+}
+.row.data-pemasakan table table th {
+  padding: 2px 6px;
+}
+.data-pemasakan .table-striped tr:nth-child(2n){
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.data-pemasakan .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #fff;
+}
+.comm-error{
+  border: 3px solid #fe0000 !important;
+}
+td.produksi-comment {
+  text-align: center;
+  color: #fff;
+  background: #8a4cdd;
+  padding: 6px !important;
+}
+.search-bar {
+  background: #f2f1f6 !important;
+  border-radius: 10px;
+}
+.search-form input{
+  padding: 8px 40px 8px 40px;
+}
+.search-bar input {
+  font-size: 11pt;
+  border: 1px solid #ddd !important;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.04); */
+  border-radius: 9px !important;
+  height: auto;
+}
+form.search-form button {
+  background: transparent;
+  border: 0;
+  color: #777;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 15px;
+  z-index: 3;
+}
+.button-header button {
+  font-size: 11pt;
+  font-weight: 500;
+}
+.button-header {
+  background: #ebebed;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* POPUP MULAI TUGAS */
+.modal-body .text-danger {
+  display: block;
+  font-size: 9pt;
+}
+#pemasakan-page .modal-dialog {
+  max-width: 750px;
+  margin: 1.75rem auto;
+}
+div#mulaiTugasBaru input, div#mulaiTugasBaru select {
+  font-size: 11pt;
+}
+#pemasakan-page .modal-dialog .modal-content {
+  padding: 16px 35px;
+  border-radius: 20px;
+  border: 0;
+}
+#pemasakan-page .modal-title {
+  font-weight: 600;
+  color: #000;
+}
+#pemasakan-page .modal-body {
+  padding: 20px 0;
+}
+#pemasakan-page .modal-body label {
+  margin-bottom: 3px !important;
+}
+#pemasakan-page .modal-body .produk-row label {
+  margin-bottom: 2px !important;
+}
+#pemasakan-page .modal-header {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 10px;
+}
+span.error-message {
+  color: #fe0000;
+  font-size: 9pt;
+  white-space: nowrap;
+}
+button#addRow {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0;
+  border: 2px solid #555;
+  color: #555;
+  margin-right: 5px;
+}
+button#deleteLastRow {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0;
+  border: 2px solid #555;
+  color: #555;
+}
+button#submitButton {
+  background: #06af38;
+  font-weight: 600;
+  padding: 6px 29px;
+  font-size: 11pt;
+  border: 2px solid #06af38;
+  height: auto;
+}
+button#closeButton{
+  color: #06af38;
+  border: 2px solid #06af38;
+  font-weight: 600;
+  background: #fff;
+  padding: 6px 29px;
+  font-size: 11pt;
+  height: auto;
+}
+.last-item {
+  padding-left: 23%;
+  position: relative;
+  top: -8px;
+  font-size: 10pt;
+}
+.input-group-text{
+  font-size: 11pt;
+}
+.modal-header .close {
+  padding: 2px 6px;
+  margin: 0 0rem 0rem auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-top: -4px;
+}

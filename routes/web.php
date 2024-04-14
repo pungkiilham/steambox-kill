@@ -17,7 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-
 Route::get('/steambox', function () {
     return view('steambox');
+});
+
+Route::get('/pemasakan', function () {
+    return view('pemasakan');
 });

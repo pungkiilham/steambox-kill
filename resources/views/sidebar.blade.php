@@ -14,10 +14,15 @@
         <i class="fas fa-fw fa-th-large"></i>
         <span>Operator</span></a>
 </li>
-<li class="nav-item mb-2 active">
+<li class="nav-item mb-2" id="steambox-menu">
     <a class="nav-link" href="{{ url('/steambox') }}">
         <i class="fas fa-fw fa-th-large"></i>
         <span>Rekap Steambox</span></a>
+</li>
+<li class="nav-item mb-2" id="pemasakan-menu">
+    <a class="nav-link" href="{{ url('/pemasakan') }}">
+        <i class="fas fa-fw fa-layer-group"></i>
+        <span>Pemasakan</span></a>
 </li>
 
 </ul>
