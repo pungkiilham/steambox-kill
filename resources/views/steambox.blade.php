@@ -1169,38 +1169,51 @@
 <!-- End of Page Wrapper -->
 
 <script>
-var checkboxes = document.querySelectorAll('input[type=checkbox]');
-var checkedOrder = [];
 
-checkboxes.forEach(function(checkbox, index) {
-    var label = document.getElementById('label' + (index + 1));
-    var orderSpan = label.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label
-    
-    checkbox.addEventListener('change', function() {
-        if (checkbox.checked) {
-            if (!checkedOrder.includes(index)) {
-                checkedOrder.push(index);
-            }
-        } else {
-            var position = checkedOrder.indexOf(index);
-            if (position !== -1) {
-                checkedOrder.splice(position, 1);
-            }
-        }
-        
-        // Perbarui urutan di dalam span
-        checkedOrder.forEach(function(checkedIndex, order) {
-            var checkedLabel = document.getElementById('label' + (checkedIndex + 1));
-            var checkedOrderSpan = checkedLabel.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label yang dicentang
-            checkedOrderSpan.textContent = order + 1;
-        });
-        
-        // Perbarui urutan di dalam span jika kotak centang diklik
-        orderSpan.textContent = checkbox.checked ? checkedOrder.indexOf(index) + 1 : '';
-    });
-});
+	 $(document).ready(function() {
+		// Inisialisasi Select2
+		var select2 = $('#mySelect').select2();
 
-$('#steambox-menu').addClass('active');
+		// Setelah Select2 terbuka, sesuaikan lebar dropdown
+		select2.on('select2:open', function() {
+			// Setel lebar dropdown menjadi lebih besar dari lebar teks terpanjang
+			$('.select2-dropdown').css('width', 'auto');
+			$('.select2-dropdown').css('min-width', '300px'); // Atur lebar minimum jika diperlukan
+		});
+	});
+		
+	var checkboxes = document.querySelectorAll('input[type=checkbox]');
+	var checkedOrder = [];
+
+	checkboxes.forEach(function(checkbox, index) {
+		var label = document.getElementById('label' + (index + 1));
+		var orderSpan = label.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label
+		
+		checkbox.addEventListener('change', function() {
+			if (checkbox.checked) {
+				if (!checkedOrder.includes(index)) {
+					checkedOrder.push(index);
+				}
+			} else {
+				var position = checkedOrder.indexOf(index);
+				if (position !== -1) {
+					checkedOrder.splice(position, 1);
+				}
+			}
+			
+			// Perbarui urutan di dalam span
+			checkedOrder.forEach(function(checkedIndex, order) {
+				var checkedLabel = document.getElementById('label' + (checkedIndex + 1));
+				var checkedOrderSpan = checkedLabel.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label yang dicentang
+				checkedOrderSpan.textContent = order + 1;
+			});
+			
+			// Perbarui urutan di dalam span jika kotak centang diklik
+			orderSpan.textContent = checkbox.checked ? checkedOrder.indexOf(index) + 1 : '';
+		});
+	});
+
+	$('#steambox-menu').addClass('active');
 
 </script>
 

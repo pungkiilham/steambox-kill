@@ -631,8 +631,13 @@
             <div class="row">
                 <div class="col-12 col-sm-6">
                     <div class="form-group">
-                        <label for="namaresep" class="text-gray-900 font-weight-semibold">1. Nama Resep</label>
-                        <input type="text" id="namaresep" name="namaresep" class=" form-control" placeholder="Pilih Resep">
+                        <label for="resepList" class="text-gray-900 font-weight-semibold">1. Nama Resep</label>
+						<select id="resepList" name="namaresep" class="w-100">
+							<option value="">Pilih resep</option>
+							<option value="1">KCSURYA KNG LBR KCL MRAH VVIP 05</option>
+							<option value="2">KCSURYA KNG LBR KCL MRAH VVIP 06</option>
+							<option value="3">KCSURYA KNG LBR KCL MRAH VVIP 07</option>
+						</select>
                         <span id="nameError" class="text-danger"></span>
                     </div>
                 </div>
@@ -668,8 +673,8 @@
             <label for="" class="text-gray-900 font-weight-semibold mt-3">4. Detail Produk</label>
             <div class="row align-items-end position-relative">
                 <div class="col-12 col-sm-10" id="produk-add">
-                    <div class="row align-items-center produk-row mb-3">
-                        <div class="col-12 col-sm-3 text-gray-900 font-weight-semibold">Item Produk 1</div>
+                    <div class="row produk-row mb-3">
+                        <div class="col-12 col-sm-3 text-gray-900 font-weight-semibold  pt-4 mt-1">Item Produk 1</div>
                         <div class="col-12 col-sm-5">
                             <label for="" class="mb-1 text-gray-800">Warna</label>
                             <select name="pilihan[]" class="warna-input form-control">
@@ -726,6 +731,24 @@
   </div>
 </div>
 
+<!-- Modal Alert -->
+<div class="modal fade" id="modalAlert" tabindex="-1" role="dialog" aria-labelledby="modalAlertLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+		<div id="modalMessage">
+			Isi popup akan ditampilkan di sini...
+		</div>
+		<div class="d-flex justify-content-center">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  Oke, Saya Mengerti
+			</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Modal Keterngan -->
 <div class="modal fade" id="tambahKeterangan" tabindex="-1" role="dialog" aria-labelledby="tambahKeteranganLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -749,206 +772,295 @@
 
 <script>
 
-$('#pemasakan-menu').addClass('active');
+	$('#pemasakan-menu').addClass('active');
+	
+	$(document).ready(function() {
+		$('#resepList').select2();
+
+		// Menambahkan event handler untuk perubahan nilai pada Select2
+		$('#resepList').on('change', function() {
+			var errorMessage = document.getElementById("nameError");
+			errorMessage.textContent = ""; // Menghapus pesan kesalahan
+		});
+	});
+
+	// Fungsi untuk menampilkan modal
+	function showModal(message) {
+		var modal = document.getElementById("modalAlert");
+		var modalMessage = document.getElementById("modalMessage");
+		modalMessage.innerHTML = message;
+		modal.style.display = "block";
+		modal.classList.add("show");
+		
+		// Menutup modal popup saat tombol close diklik
+		var closeBtn = modal.querySelector(".close");
+		closeBtn.onclick = function() {
+		modal.style.display = "none";
+		};
+
+		// Menutup modal popup saat mengklik di luar area modal
+		window.onclick = function(event) {
+		if (event.target == modal) {
+		  modal.style.display = "none";
+		}
+		};
+	}
+
+	// Fungsi untuk menambahkan baris baru
+	function addRow() {
+		  var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
+		  var newRow = document.createElement("div");
+		  newRow.classList.add("row", "produk-row", "mb-3");
+
+		  if (rowCount >= 3) {
+			showModal("<p class='text-center'>Sudah terdapat 3 inputan item produk.</p><p class='text-center'>Anda tidak dapat menambah inputan item produk lagi karena sudah mencapai batas maksimal.</p>");
+			return; // Menghentikan fungsi jika jumlah baris sudah mencapai batas maksimum
+		}
+		
+		  var itemLabel = document.createElement("div");
+		  itemLabel.classList.add("col-12", "col-sm-3", "text-gray-900", "font-weight-semibold", "mt-1", "pt-4");
+		  itemLabel.textContent = "Item Produk " + (rowCount + 1);
+		  newRow.appendChild(itemLabel);
+
+		  var selectCol = document.createElement("div");
+		  selectCol.classList.add("col-12", "col-sm-5");
+		  newRow.appendChild(selectCol);
+
+		  var selectLabel = document.createElement("label");
+		  selectLabel.classList.add("mb-1", "text-gray-800");
+		  selectLabel.textContent = "Warna";
+		  selectCol.appendChild(selectLabel);
+
+		  var select = document.createElement("select");
+		  select.name = "pilihan[]";
+		  select.classList.add("warna-input", "form-control");
+		  selectCol.appendChild(select);
+
+		  var optionDefault = document.createElement("option");
+		  optionDefault.value = "";
+		  optionDefault.textContent = "Pilih warna";
+		  select.appendChild(optionDefault);
+
+		  var option1 = new Option("Pilihan 1", "1");
+		  var option2 = new Option("Pilihan 2", "2");
+		  var option3 = new Option("Pilihan 3", "3");
+		  select.appendChild(option1);
+		  select.appendChild(option2);
+		  select.appendChild(option3);
+
+		  var selectError = document.createElement("span");
+		  selectError.classList.add("error-message");
+		  selectCol.appendChild(selectError);
+
+		  var batchCol = document.createElement("div");
+		  batchCol.classList.add("col-12", "col-sm-2");
+		  newRow.appendChild(batchCol);
+
+		  var batchLabel = document.createElement("label");
+		  batchLabel.classList.add("mb-1", "text-gray-700");
+		  batchLabel.textContent = "Batch";
+		  batchCol.appendChild(batchLabel);
+
+		  var batchInput = document.createElement("input");
+		  batchInput.type = "text";
+		  batchInput.name = "batch[]";
+		  batchInput.classList.add("batch-input", "form-control");
+		  batchCol.appendChild(batchInput);
+
+		  var batchError = document.createElement("span");
+		  batchError.classList.add("error-message");
+		  batchCol.appendChild(batchError);
+
+		  var gelondongCol = document.createElement("div");
+		  gelondongCol.classList.add("col-12", "col-sm-2");
+		  newRow.appendChild(gelondongCol);
+
+		  var gelondongLabel = document.createElement("label");
+		  gelondongLabel.classList.add("mb-1", "text-nowrap", "text-gray-700");
+		  gelondongLabel.textContent = "Jmlh Gelondong";
+		  gelondongCol.appendChild(gelondongLabel);
+
+		  var gelondongInput = document.createElement("input");
+		  gelondongInput.type = "number";
+		  gelondongInput.name = "gelondong[]";
+		  gelondongInput.classList.add("gelondong-input", "form-control");
+		  gelondongCol.appendChild(gelondongInput);
+
+		  var gelondongError = document.createElement("span");
+		  gelondongError.classList.add("error-message");
+		  gelondongCol.appendChild(gelondongError);
+
+	  
+		// Menambahkan event listener untuk memeriksa input saat berubah
+		select.addEventListener("change", function() {
+			checkInputFilled(select);
+		});
+
+		batchInput.addEventListener("input", function() {
+			checkInputFilled(batchInput);
+		});
+
+		gelondongInput.addEventListener("input", function() {
+			checkInputFilled(gelondongInput);
+		});
+		
+		document.getElementById("produk-add").appendChild(newRow);
+	}
 
 
-// Fungsi untuk menambahkan baris baru
-function addRow() {
-  var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
-  var newRow = document.createElement("div");
-  newRow.classList.add("row", "align-items-center", "produk-row", "mb-3");
+	// Fungsi untuk menghapus baris terakhir
+	function deleteLastRow() {
+	  var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
+	  if (rowCount > 1) { // Pastikan ada lebih dari satu baris sebelum menghapus
+		document.querySelector("#produk-add .produk-row:last-child").remove();
+	  } else {
+		showModal("<p class='text-center'>Tidak dapat menghapus inputan item produk karena sudah mencapai batas minimal.</p>");
+		return; // Menghentikan fungsi jika jumlah baris sudah mencapai batas maksimum
+	  }
+	}
 
-  var itemLabel = document.createElement("div");
-  itemLabel.classList.add("col-12", "col-sm-3", "text-gray-900", "font-weight-semibold");
-  itemLabel.textContent = "Item Produk " + (rowCount + 1);
-  newRow.appendChild(itemLabel);
+	document.getElementById("addRow").addEventListener("click", addRow);
+	document.getElementById("deleteLastRow").addEventListener("click", deleteLastRow);
 
-  var selectCol = document.createElement("div");
-  selectCol.classList.add("col-12", "col-sm-5");
-  newRow.appendChild(selectCol);
+	// Menghilangkan default behavior tombol tambah dan hapus untuk mencegah submit form
+	document.getElementById("addRow").addEventListener("click", function(event) {
+	  event.preventDefault(); // Menghentikan default behavior tombol tambah
+	//   addRow();
+	});
 
-  var selectLabel = document.createElement("label");
-  selectLabel.classList.add("mb-1", "text-gray-800");
-  selectLabel.textContent = "Warna";
-  selectCol.appendChild(selectLabel);
+	// Menghilangkan default behavior tombol tambah dan hapus untuk mencegah submit form
+	document.getElementById("deleteLastRow").addEventListener("click", function(event) {
+	  event.preventDefault(); // Menghentikan default behavior tombol tambah
+	//   deleteLastRow();
+	});
 
-  var select = document.createElement("select");
-  select.name = "pilihan[]";
-  select.classList.add("warna-input", "form-control");
-  selectCol.appendChild(select);
+	document.getElementById("submitButton").addEventListener("click", function(event) {
+		var name = $("#resepList").val().trim(); // Menggunakan jQuery untuk mendapatkan nilai dari Select2
+		var email = document.getElementById("versi").value.trim();
+		var message = document.getElementById("trolli").value.trim();
+		var error = false;
 
-  var optionDefault = document.createElement("option");
-  optionDefault.value = "";
-  optionDefault.textContent = "Pilih warna";
-  select.appendChild(optionDefault);
+		// Validasi input Nama
+		if (name === "") {
+			document.getElementById("nameError").textContent = "isi resep";
+			error = true;
+		} else {
+			document.getElementById("nameError").textContent = "";
+		}
 
-  var option1 = new Option("Pilihan 1", "1");
-  var option2 = new Option("Pilihan 2", "2");
-  var option3 = new Option("Pilihan 3", "3");
-  select.appendChild(option1);
-  select.appendChild(option2);
-  select.appendChild(option3);
+		// Validasi input Email
+		if (email === "") {
+			document.getElementById("versiError").textContent = "isi versi";
+			error = true;
+		} else {
+			document.getElementById("versiError").textContent = "";
+		}
 
-  var selectError = document.createElement("span");
-  selectError.classList.add("error-message");
-  selectCol.appendChild(selectError);
+		// Validasi input Pesan
+		if (message === "") {
+			document.getElementById("trolliError").textContent = "isi troli";
+			error = true;
+		} else {
+			document.getElementById("trolliError").textContent = "";
+		}
 
-  var batchCol = document.createElement("div");
-  batchCol.classList.add("col-12", "col-sm-2");
-  newRow.appendChild(batchCol);
+		// Validasi input hasil dari addRow
+		var warnaInputs = document.querySelectorAll(".warna-input");
+		var batchInputs = document.querySelectorAll(".batch-input");
+		var gelondongInputs = document.querySelectorAll(".gelondong-input");
 
-  var batchLabel = document.createElement("label");
-  batchLabel.classList.add("mb-1", "text-gray-700");
-  batchLabel.textContent = "Batch";
-  batchCol.appendChild(batchLabel);
+		// Fungsi untuk menghapus pesan error jika input sudah terisi
+		function clearErrorMessage(input) {
+			var errorMessage = input.parentElement.querySelector(".error-message");
+			errorMessage.textContent = "";
+		}
 
-  var batchInput = document.createElement("input");
-  batchInput.type = "text";
-  batchInput.name = "batch[]";
-  batchInput.classList.add("batch-input", "form-control");
-  batchCol.appendChild(batchInput);
+		batchInputs.forEach(function(input) {
+			if (input.value.trim() === "") {
+				error = true;
+				input.parentElement.querySelector(".error-message").textContent = "isi batch";
+			} else {
+				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+			}
+		});
 
-  var batchError = document.createElement("span");
-  batchError.classList.add("error-message");
-  batchCol.appendChild(batchError);
+		gelondongInputs.forEach(function(input) {
+			if (input.value.trim() === "") {
+				error = true;
+				input.parentElement.querySelector(".error-message").textContent = "isi gelondong";
+			} else {
+				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+			}
+		});
 
-  var gelondongCol = document.createElement("div");
-  gelondongCol.classList.add("col-12", "col-sm-2");
-  newRow.appendChild(gelondongCol);
+		warnaInputs.forEach(function(input) {
+			if (input.value.trim() === "") {
+				error = true;
+				input.parentElement.querySelector(".error-message").textContent = "isi warna";
+			} else {
+				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+			}
+		});
 
-  var gelondongLabel = document.createElement("label");
-  gelondongLabel.classList.add("mb-1", "text-nowrap", "text-gray-700");
-  gelondongLabel.textContent = "Jmlh Gelondong";
-  gelondongCol.appendChild(gelondongLabel);
+		// Jika terdapat error, hentikan submit formulir
+		if (error) {
+			event.preventDefault();
+			return false; // Tambahkan ini
+		}
+	});
 
-  var gelondongInput = document.createElement("input");
-  gelondongInput.type = "number";
-  gelondongInput.name = "gelondong[]";
-  gelondongInput.classList.add("gelondong-input", "form-control");
-  gelondongCol.appendChild(gelondongInput);
+	// Menambahkan event listener untuk setiap input
+	var inputs = document.querySelectorAll(".batch-input, .gelondong-input, .warna-input");
+	inputs.forEach(function(input) {
+		input.addEventListener("input", function() {
+			clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error saat input berubah
+		});
+	});
 
-  var gelondongError = document.createElement("span");
-  gelondongError.classList.add("error-message");
-  gelondongCol.appendChild(gelondongError);
+	// Fungsi untuk menghapus pesan error
+	function clearErrorMessage(input) {
+		input.parentElement.querySelector(".error-message").textContent = "";
+	}
 
-  document.getElementById("produk-add").appendChild(newRow);
-}
+	// Menambahkan event listener untuk memeriksa setiap kali nilai selectbox berubah
+	$("#versi, #trolli").change(function() {
+		var inputId = $(this).attr("id");
+		$("#" + inputId + "Error").text(""); // Menghapus teks error jika opsi telah dipilih
+	});
 
 
-// Fungsi untuk menghapus baris terakhir
-function deleteLastRow() {
-  var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
-  if (rowCount > 1) { // Pastikan ada lebih dari satu baris sebelum menghapus
-    document.querySelector("#produk-add .produk-row:last-child").remove();
-  } else {
-    alert("Tidak bisa menghapus baris terakhir.");
-  }
-}
+	// Mengecek apakah input sudah diisi dan memberikan gaya border hijau
+	function checkInputFilled(inputElement) {
+		if (inputElement.value.trim() !== "") {
+			inputElement.style.border = "1px solid green"; // Atur gaya border menjadi hijau jika input sudah diisi
+		} else {
+			inputElement.style.border = ""; // Hapus gaya border jika input kosong
+		}
+	}
 
-document.getElementById("addRow").addEventListener("click", addRow);
-document.getElementById("deleteLastRow").addEventListener("click", deleteLastRow);
+	// Menambahkan event listener untuk setiap input
+	var inputs = document.querySelectorAll(".batch-input, .gelondong-input, .versi-input, #namaresep, .trolli-input, .warna-input, #resepList");
+	inputs.forEach(function(input) {
+		input.addEventListener("input", function() {
+			checkInputFilled(input); // Panggil fungsi untuk memeriksa apakah input sudah diisi
+		});
+	});
 
-// Menghilangkan default behavior tombol tambah dan hapus untuk mencegah submit form
-document.getElementById("addRow").addEventListener("click", function(event) {
-  event.preventDefault(); // Menghentikan default behavior tombol tambah
-//   addRow();
-});
+	// Event handler for Select2 #resepList
+	$('#resepList').on('change', function() {
+		var select2Container = $('#select2-resepList-container');
+		var selectedOption = $(this).find('option:selected').text().trim();
 
-// Menghilangkan default behavior tombol tambah dan hapus untuk mencegah submit form
-document.getElementById("deleteLastRow").addEventListener("click", function(event) {
-  event.preventDefault(); // Menghentikan default behavior tombol tambah
-//   deleteLastRow();
-});
+		if (selectedOption !== "") {
+			select2Container.parent().css('border', '1px solid green'); // Set green border when an item is selected
+		} else {
+			select2Container.parent().css('border', ''); // Remove border if no item is selected
+		}
+	});
 
-document.getElementById("submitButton").addEventListener("click", function(event) {
-    var name = document.getElementById("namaresep").value.trim();
-    var email = document.getElementById("versi").value.trim();
-    var message = document.getElementById("trolli").value.trim();
-    var error = false;
 
-    // Validasi input Nama
-    if (name === "") {
-        document.getElementById("nameError").textContent = "isi resep";
-        error = true;
-    } else {
-        document.getElementById("nameError").textContent = "";
-    }
 
-    // Validasi input Email
-    if (email === "") {
-        document.getElementById("versiError").textContent = "isi versi";
-        error = true;
-    } else {
-        document.getElementById("versiError").textContent = "";
-    }
-
-    // Validasi input Pesan
-    if (message === "") {
-        document.getElementById("trolliError").textContent = "isi troli";
-        error = true;
-    } else {
-        document.getElementById("trolliError").textContent = "";
-    }
-
-    // Validasi input hasil dari addRow
-    var warnaInputs = document.querySelectorAll(".warna-input");
-    var batchInputs = document.querySelectorAll(".batch-input");
-    var gelondongInputs = document.querySelectorAll(".gelondong-input");
-
-    batchInputs.forEach(function(input) {
-        var errorMessage = input.parentElement.querySelector(".error-message");
-        if (input.value.trim() === "") {
-            error = true;
-            errorMessage.textContent = "isi batch";
-        } else {
-            errorMessage.textContent = "";
-        }
-    });
-
-    gelondongInputs.forEach(function(input) {
-        var errorMessage = input.parentElement.querySelector(".error-message");
-        if (input.value.trim() === "") {
-            error = true;
-            errorMessage.textContent = "isi gelondong";
-        } else {
-            errorMessage.textContent = "";
-        }
-    });
-
-    warnaInputs.forEach(function(input) {
-        var errorMessage = input.parentElement.querySelector(".error-message");
-        if (input.value.trim() === "") {
-            error = true;
-            errorMessage.textContent = "isi warna";
-        } else {
-            errorMessage.textContent = "";
-        }
-    });
-
-    // Jika terdapat error, hentikan submit formulir
-    if (error) {
-        event.preventDefault();
-        return false; // Tambahkan ini
-    }
-});
-
-// Mengecek apakah input sudah diisi dan memberikan gaya border hijau
-function checkInputFilled(inputElement) {
-    if (inputElement.value.trim() !== "") {
-        inputElement.style.border = "1px solid green"; // Atur gaya border menjadi hijau jika input sudah diisi
-    } else {
-        inputElement.style.border = ""; // Hapus gaya border jika input kosong
-    }
-}
-
-// Menambahkan event listener untuk setiap input
-var inputs = document.querySelectorAll(".batch-input, .gelondong-input, .versi-input, #namaresep, .trolli-input, .warna-input ");
-inputs.forEach(function(input) {
-    input.addEventListener("input", function() {
-        checkInputFilled(input); // Panggil fungsi untuk memeriksa apakah input sudah diisi
-    });
-});
-
+		
 
 </script>
 

@@ -14,17 +14,6 @@
 
 
     <script>
- $(document).ready(function() {
-    // Inisialisasi Select2
-    var select2 = $('#mySelect').select2();
-
-    // Setelah Select2 terbuka, sesuaikan lebar dropdown
-    select2.on('select2:open', function() {
-        // Setel lebar dropdown menjadi lebih besar dari lebar teks terpanjang
-        $('.select2-dropdown').css('width', 'auto');
-        $('.select2-dropdown').css('min-width', '300px'); // Atur lebar minimum jika diperlukan
-    });
-});
     </script>
 </body>
 

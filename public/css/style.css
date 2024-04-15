@@ -193,32 +193,44 @@ span.color-legend {
   position: relative !important;
   right: 0 !important;
 }
-#steambox-page span.select2-results {
+span.select2-results {
   font-size: 11pt !important;
   /* white-space: nowrap; */
 }
-#steambox-page > .select2-container--open li{
+.select2-container--open li{
   border-radius: 5px;
 }
-#steambox-page > .select2-container--open .select2-dropdown {
-  position: relative !important;
-  border: 0;
+.select2-container--open .select2-dropdown {
+    position: relative !important;
+    border: 1px solid #ddd !important;
+    border-radius: 5px !important;
 }
-#steambox-page > .select2-container--open .select2-search--dropdown input {
-  border-radius: 4px;
+.select2-container--open .select2-search--dropdown input {
+    border-radius: 5px;
+    padding: 5px 35px;
+    border: 1px solid #ccc !important;
 }
-#steambox-page > .select2-container--open
+span.select2-search.select2-search--dropdown:before {
+    content: "\f002";
+    color: #1a76e9;
+    font-size: 13pt;
+    z-index: 999;
+    font-weight: 600;
+    position: absolute;
+    left: 18px;
+    font-family: "Font Awesome 5 Free";
+    top: 12px;
+}
+.select2-container--open
 .select2-search--dropdown {
   display: block;
   padding: 7px;
   background: #f2f2f2;
 }
-#steambox-page > .select2-container--open ul{
+.select2-container--open ul{
   padding: 7px 7px 7px;
 }
-#steambox-page > .select2-container--open {
-  right: 25px;
-  left: auto !important;
+.select2-container--open {
   display: flex;
   justify-content: flex-end;
   border: 0 !important;
@@ -226,6 +238,10 @@ span.color-legend {
   border-radius: 6px;
   overflow: hidden;
   margin-top: 4px;
+}
+#steambox-page > .select2-container--open {
+  right: 25px;
+  left: auto !important;
 }
 .big-drop {
   width: auto !important; /* Atur lebar dropdown menjadi otomatis */
@@ -522,6 +538,7 @@ div#mulaiTugasBaru input, div#mulaiTugasBaru select {
 }
 #pemasakan-page .modal-body label {
   margin-bottom: 3px !important;
+  display: block;
 }
 #pemasakan-page .modal-body .produk-row label {
   margin-bottom: 2px !important;
@@ -589,4 +606,53 @@ button#closeButton{
   border: 1px solid #aaa;
   border-radius: 5px;
   margin-top: -4px;
+}
+
+/*select2 modal*/
+.modal-backdrop{
+	display:none
+}
+.modal-body .select2-container {
+    width: 100% !important;
+    box-shadow: none !important;
+    margin-top: 0;
+}
+.modal-body .select2-container--default .select2-selection--single {
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #d1d3e2 ;
+    border-radius: 0.35rem !important;
+}
+.modal-body .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #777;
+    line-height: normal;
+    padding-left: 5px;
+}
+.modal-body .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 4px;
+}
+.modal-body span.selection {
+    width: 100%;
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-right: 0 !important;
+}
+#pemasakan-page div#modalAlert .modal-dialog {
+    width: 500px;
+}
+#pemasakan-page div#modalAlert .modal-dialog button.close {
+    font-size: 11pt;
+    background: #000;
+    color: #fff;
+    text-shadow: none;
+    opacity: 1;
+    padding: 10px 30px;
+    font-weight: normal;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+div#modalMessage {
+    color: #000;
+    font-weight: 500;
 }
