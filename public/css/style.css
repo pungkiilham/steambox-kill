@@ -656,3 +656,56 @@ div#modalMessage {
     color: #000;
     font-weight: 500;
 }
+
+/*POPUP WARNING*/
+#modalWarning span.material-symbols-outlined {
+    color: #f00;
+    font-size: 102pt;
+    text-align: center;
+    display: block;
+}
+#modalWarning h2 {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+	margin-bottom:15px;
+}
+#modalWarning li{
+	margin-bottom:5px
+}
+
+#pemasakan-page div#modalWarning .modal-dialog {
+    width: 640px;
+	font-weith:500;
+}
+.no-button {
+    border: 2px solid #dc2c2c !important;
+    font-size: 12pt;
+    padding: 10px 17px !important;
+    color: #dc2c2c;
+    opacity: 1;
+    border-radius: 5px;
+    text-shadow: none !important;
+    min-width: 100px;
+}
+.yes-button {
+    border: 2px solid #dc2c2c !important;
+    font-size: 12pt;
+    padding: 10px 17px !important;
+    color: #fff;
+    background: #dc2c2c !important;
+    opacity: 1;
+    border-radius: 5px;
+    text-shadow: none !important;
+    min-width: 100px;
+}
+#modalWarning table {
+    border: 1px solid #ddd;
+    width: 90%;
+    margin: 0 auto 10px;
+}
+#modalWarning table td {
+    padding: 6px 12px;
+    border-right: 1px solid #ddd;
+    color: #000;
+}

@@ -719,6 +719,9 @@
                     </div>
                 </div>
             </div>
+				<button type="submit" class="btn btn-primary" id="sisaGelondongButton">Sisa Gelondong</button>
+				<button type="submit" class="btn btn-primary" id="kelebihanGelondongButton">Kelebihan Gelondong</button>
+				<button type="submit" class="btn btn-primary" id="batchTerpakaiButton">Batch Sudah Terpakai</button>
             <div class="d-flex justify-content-end">
                 <button type="button" class="btn btn-primary mr-4" id="closeButton" data-dismiss="modal" aria-label="Close">Cancel</button>
                 <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
@@ -742,6 +745,29 @@
 		<div class="d-flex justify-content-center">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			  Oke, Saya Mengerti
+			</button>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Warning -->
+<div class="modal fade" id="modalWarning" tabindex="-1" role="dialog" aria-labelledby="modalWarningLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-gray-900">
+		<span class="material-symbols-outlined">warning</span>
+		<h2>PERHATIAN !</h2>
+		<div id="modalWarningMessage">
+			Isi popup akan ditampilkan di sini...
+		</div>
+		<div class="d-flex justify-content-center mt-4">
+			<button type="button" class="close no-button mr-5" data-dismiss="modal" aria-label="Close">
+			  Tidak
+			</button>
+			<button type="button" class="close yes-button" data-dismiss="modal" aria-label="Close">
+			  Ya
 			</button>
 		</div>
       </div>
@@ -784,7 +810,7 @@
 		});
 	});
 
-	// Fungsi untuk menampilkan modal
+	// Fungsi untuk menampilkan modal alert
 	function showModal(message) {
 		var modal = document.getElementById("modalAlert");
 		var modalMessage = document.getElementById("modalMessage");
@@ -806,106 +832,130 @@
 		};
 	}
 
-	// Fungsi untuk menambahkan baris baru
-	function addRow() {
-		  var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
-		  var newRow = document.createElement("div");
-		  newRow.classList.add("row", "produk-row", "mb-3");
+	// Mengecek apakah input sudah diisi dan memberikan gaya border hijau
+	function checkInputFilled(inputElement) {
+		if (inputElement.value.trim() !== "") {
+			inputElement.style.border = "1px solid green"; // Atur gaya border menjadi hijau jika input sudah diisi
+		} else {
+			inputElement.style.border = ""; // Hapus gaya border jika input kosong
+		}
+	}
 
-		  if (rowCount >= 3) {
+	// Menambahkan event listener untuk setiap input
+	var inputs = document.querySelectorAll(".batch-input, .gelondong-input, .versi-input, #namaresep, .trolli-input, .warna-input, #resepList");
+	inputs.forEach(function(input) {
+		input.addEventListener("input", function() {
+			checkInputFilled(input); // Panggil fungsi untuk memeriksa apakah input sudah diisi
+		});
+	});
+	
+	function addRow() {
+		var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
+		var newRow = document.createElement("div");
+		newRow.classList.add("row", "produk-row", "mb-3");
+
+		if (rowCount >= 3) {
 			showModal("<p class='text-center'>Sudah terdapat 3 inputan item produk.</p><p class='text-center'>Anda tidak dapat menambah inputan item produk lagi karena sudah mencapai batas maksimal.</p>");
 			return; // Menghentikan fungsi jika jumlah baris sudah mencapai batas maksimum
 		}
-		
-		  var itemLabel = document.createElement("div");
-		  itemLabel.classList.add("col-12", "col-sm-3", "text-gray-900", "font-weight-semibold", "mt-1", "pt-4");
-		  itemLabel.textContent = "Item Produk " + (rowCount + 1);
-		  newRow.appendChild(itemLabel);
 
-		  var selectCol = document.createElement("div");
-		  selectCol.classList.add("col-12", "col-sm-5");
-		  newRow.appendChild(selectCol);
+		var itemLabel = document.createElement("div");
+		itemLabel.classList.add("col-12", "col-sm-3", "text-gray-900", "font-weight-semibold", "mt-1", "pt-4");
+		itemLabel.textContent = "Item Produk " + (rowCount + 1);
+		newRow.appendChild(itemLabel);
 
-		  var selectLabel = document.createElement("label");
-		  selectLabel.classList.add("mb-1", "text-gray-800");
-		  selectLabel.textContent = "Warna";
-		  selectCol.appendChild(selectLabel);
+		var selectCol = document.createElement("div");
+		selectCol.classList.add("col-12", "col-sm-5");
+		newRow.appendChild(selectCol);
 
-		  var select = document.createElement("select");
-		  select.name = "pilihan[]";
-		  select.classList.add("warna-input", "form-control");
-		  selectCol.appendChild(select);
+		var selectLabel = document.createElement("label");
+		selectLabel.classList.add("mb-1", "text-gray-800");
+		selectLabel.textContent = "Warna";
+		selectCol.appendChild(selectLabel);
 
-		  var optionDefault = document.createElement("option");
-		  optionDefault.value = "";
-		  optionDefault.textContent = "Pilih warna";
-		  select.appendChild(optionDefault);
+		var select = document.createElement("select");
+		select.name = "pilihan[]";
+		select.classList.add("warna-input", "form-control");
+		selectCol.appendChild(select);
 
-		  var option1 = new Option("Pilihan 1", "1");
-		  var option2 = new Option("Pilihan 2", "2");
-		  var option3 = new Option("Pilihan 3", "3");
-		  select.appendChild(option1);
-		  select.appendChild(option2);
-		  select.appendChild(option3);
+		var optionDefault = document.createElement("option");
+		optionDefault.value = "";
+		optionDefault.textContent = "Pilih warna";
+		select.appendChild(optionDefault);
 
-		  var selectError = document.createElement("span");
-		  selectError.classList.add("error-message");
-		  selectCol.appendChild(selectError);
+		var option1 = new Option("Pilihan 1", "1");
+		var option2 = new Option("Pilihan 2", "2");
+		var option3 = new Option("Pilihan 3", "3");
+		select.appendChild(option1);
+		select.appendChild(option2);
+		select.appendChild(option3);
 
-		  var batchCol = document.createElement("div");
-		  batchCol.classList.add("col-12", "col-sm-2");
-		  newRow.appendChild(batchCol);
+		var selectError = document.createElement("span");
+		selectError.classList.add("error-message");
+		selectCol.appendChild(selectError);
 
-		  var batchLabel = document.createElement("label");
-		  batchLabel.classList.add("mb-1", "text-gray-700");
-		  batchLabel.textContent = "Batch";
-		  batchCol.appendChild(batchLabel);
+		var batchCol = document.createElement("div");
+		batchCol.classList.add("col-12", "col-sm-2");
+		newRow.appendChild(batchCol);
 
-		  var batchInput = document.createElement("input");
-		  batchInput.type = "text";
-		  batchInput.name = "batch[]";
-		  batchInput.classList.add("batch-input", "form-control");
-		  batchCol.appendChild(batchInput);
+		var batchLabel = document.createElement("label");
+		batchLabel.classList.add("mb-1", "text-gray-700");
+		batchLabel.textContent = "Batch";
+		batchCol.appendChild(batchLabel);
 
-		  var batchError = document.createElement("span");
-		  batchError.classList.add("error-message");
-		  batchCol.appendChild(batchError);
+		var batchInput = document.createElement("input");
+		batchInput.type = "text";
+		batchInput.name = "batch[]";
+		batchInput.classList.add("batch-input", "form-control");
+		batchCol.appendChild(batchInput);
 
-		  var gelondongCol = document.createElement("div");
-		  gelondongCol.classList.add("col-12", "col-sm-2");
-		  newRow.appendChild(gelondongCol);
+		var batchError = document.createElement("span");
+		batchError.classList.add("error-message");
+		batchCol.appendChild(batchError);
 
-		  var gelondongLabel = document.createElement("label");
-		  gelondongLabel.classList.add("mb-1", "text-nowrap", "text-gray-700");
-		  gelondongLabel.textContent = "Jmlh Gelondong";
-		  gelondongCol.appendChild(gelondongLabel);
+		var gelondongCol = document.createElement("div");
+		gelondongCol.classList.add("col-12", "col-sm-2");
+		newRow.appendChild(gelondongCol);
 
-		  var gelondongInput = document.createElement("input");
-		  gelondongInput.type = "number";
-		  gelondongInput.name = "gelondong[]";
-		  gelondongInput.classList.add("gelondong-input", "form-control");
-		  gelondongCol.appendChild(gelondongInput);
+		var gelondongLabel = document.createElement("label");
+		gelondongLabel.classList.add("mb-1", "text-nowrap", "text-gray-700");
+		gelondongLabel.textContent = "Jmlh Gelondong";
+		gelondongCol.appendChild(gelondongLabel);
 
-		  var gelondongError = document.createElement("span");
-		  gelondongError.classList.add("error-message");
-		  gelondongCol.appendChild(gelondongError);
+		var gelondongInput = document.createElement("input");
+		gelondongInput.type = "number";
+		gelondongInput.name = "gelondong[]";
+		gelondongInput.classList.add("gelondong-input", "form-control");
+		gelondongCol.appendChild(gelondongInput);
 
-	  
+		var gelondongError = document.createElement("span");
+		gelondongError.classList.add("error-message");
+		gelondongCol.appendChild(gelondongError);
+
 		// Menambahkan event listener untuk memeriksa input saat berubah
-		select.addEventListener("change", function() {
+		select.addEventListener("change", function () {
 			checkInputFilled(select);
 		});
 
-		batchInput.addEventListener("input", function() {
+		batchInput.addEventListener("input", function () {
 			checkInputFilled(batchInput);
 		});
 
-		gelondongInput.addEventListener("input", function() {
+		gelondongInput.addEventListener("input", function () {
 			checkInputFilled(gelondongInput);
 		});
-		
+
+		// Menambahkan baris baru ke dalam kontainer
 		document.getElementById("produk-add").appendChild(newRow);
+		
+		// Menambahkan event listener untuk memeriksa input saat berubah pada baris baru
+		newRow.querySelectorAll(".batch-input, .gelondong-input, .warna-input").forEach(function (input) {
+			input.addEventListener("input", function () {
+				clearErrorMessage(input);
+			});
+		});
 	}
+
 
 
 	// Fungsi untuk menghapus baris terakhir
@@ -933,6 +983,13 @@
 	  event.preventDefault(); // Menghentikan default behavior tombol tambah
 	//   deleteLastRow();
 	});
+	
+	
+	// Fungsi untuk menghapus pesan error jika input sudah terisi
+	function clearErrorMessage(input) {
+		var errorMessage = input.parentElement.querySelector(".error-message");
+		errorMessage.textContent = "";
+	}
 
 	document.getElementById("submitButton").addEventListener("click", function(event) {
 		var name = $("#resepList").val().trim(); // Menggunakan jQuery untuk mendapatkan nilai dari Select2
@@ -968,12 +1025,6 @@
 		var warnaInputs = document.querySelectorAll(".warna-input");
 		var batchInputs = document.querySelectorAll(".batch-input");
 		var gelondongInputs = document.querySelectorAll(".gelondong-input");
-
-		// Fungsi untuk menghapus pesan error jika input sudah terisi
-		function clearErrorMessage(input) {
-			var errorMessage = input.parentElement.querySelector(".error-message");
-			errorMessage.textContent = "";
-		}
 
 		batchInputs.forEach(function(input) {
 			if (input.value.trim() === "") {
@@ -1028,24 +1079,6 @@
 		$("#" + inputId + "Error").text(""); // Menghapus teks error jika opsi telah dipilih
 	});
 
-
-	// Mengecek apakah input sudah diisi dan memberikan gaya border hijau
-	function checkInputFilled(inputElement) {
-		if (inputElement.value.trim() !== "") {
-			inputElement.style.border = "1px solid green"; // Atur gaya border menjadi hijau jika input sudah diisi
-		} else {
-			inputElement.style.border = ""; // Hapus gaya border jika input kosong
-		}
-	}
-
-	// Menambahkan event listener untuk setiap input
-	var inputs = document.querySelectorAll(".batch-input, .gelondong-input, .versi-input, #namaresep, .trolli-input, .warna-input, #resepList");
-	inputs.forEach(function(input) {
-		input.addEventListener("input", function() {
-			checkInputFilled(input); // Panggil fungsi untuk memeriksa apakah input sudah diisi
-		});
-	});
-
 	// Event handler for Select2 #resepList
 	$('#resepList').on('change', function() {
 		var select2Container = $('#select2-resepList-container');
@@ -1060,6 +1093,49 @@
 
 
 
+
+	// Fungsi untuk menampilkan modal warning
+	function showWarningModal(message) {
+		var modal = document.getElementById("modalWarning");
+		var modalMessage = document.getElementById("modalWarningMessage");
+		modalMessage.innerHTML = message;
+		modal.style.display = "block";
+		modal.classList.add("show");
+		
+		// Menutup modal popup saat tombol close diklik
+		var closeBtn = modal.querySelector(".close");
+		closeBtn.onclick = function() {
+		modal.style.display = "none";
+		};
+
+		// Menutup modal popup saat mengklik di luar area modal
+		window.onclick = function(event) {
+		if (event.target == modal) {
+		  modal.style.display = "none";
+		}
+		};
+	}
+	
+	document.getElementById("sisaGelondongButton").addEventListener("click", function(event) {
+		showWarningModal(
+		'<p class="text-center">Terdapat sisa "20 gelondong" <br/>Apakah anda yakin tetap ingin memproses ini?</p><ul><li>jika "YA" maka sisa gelondong akan digunakan pada proses berikutnya yang menggunakan resep dan warna yang sama dengan proses ini.</li><li> jika "TIDAK" maka input gelondong sampai jumlahnya sama dengan batas max trolli yang dipilih.</li></ul>'
+		);
+		event.preventDefault(); // Menghentikan default behavior tombol tambah
+	});
+		
+	document.getElementById("kelebihanGelondongButton").addEventListener("click", function(event) {
+		showWarningModal(
+		'<p class="text-center">Hari ini, ada sisa gelondong di batch sebelumnya dengan data</p><table class="table"><tr><td>resep</td><td>Surya Bintang Kancing Mitra Gondang Legi</td></tr><tr><td>versi</td><td>3</td></tr><tr><td>trolli</td><td>flip</td></tr><tr><td>warna</td><td>merah</td></tr><tr><td>batch</td><td>1</td></tr><tr><td>jmlh sisa gld</td><td>140</td></tr></table><p class="text-center">Apakah anda ingin melanjutkan sisa batch 1 : 40 gelondong?</p>'
+		);
+		event.preventDefault(); // Menghentikan default behavior tombol tambah
+	});
+		
+	document.getElementById("batchTerpakaiButton").addEventListener("click", function(event) {
+		showWarningModal(
+		'<p class="text-center">Batch sudah terpakai dalam proses pemasakan, <br/>tidak ada sisa gelondong.</p><p class="text-center">Batch akan terganti otomatis dengan batch berikutnya.</p>'
+		);
+		event.preventDefault(); // Menghentikan default behavior tombol tambah
+	});
 		
 
 </script>
