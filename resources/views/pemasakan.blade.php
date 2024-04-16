@@ -235,13 +235,13 @@
                                                         <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            error
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            more_time
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
@@ -345,13 +345,13 @@
                                                         <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            error
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            more_time
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
@@ -456,13 +456,13 @@
                                                         <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            error
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            more_time
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
@@ -569,13 +569,13 @@
                                                         <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            error
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
-                                                            library_add_check
+                                                            more_time
                                                             </span>
                                                         </button>
                                                         <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
