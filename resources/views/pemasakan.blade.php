@@ -98,7 +98,7 @@
                                                             library_add_check
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -134,7 +134,7 @@
                                                             library_add_check
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan" disabled>
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#" disabled>
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -232,19 +232,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -342,19 +342,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -453,19 +453,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -566,19 +566,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#mulaiTugasBaru">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
