@@ -24,6 +24,11 @@
         <i class="fas fa-fw fa-layer-group"></i>
         <span>Pemasakan</span></a>
 </li>
+<li class="nav-item mb-2" id="resep-menu">
+    <a class="nav-link" href="{{ url('/resep') }}">
+        <i class="fas fa-fw fa-file-alt"></i>
+        <span>Resep</span></a>
+</li>
 
 </ul>
 <!-- End of Sidebar -->

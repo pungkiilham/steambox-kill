@@ -24,3 +24,7 @@ Route::get('/steambox', function () {
 Route::get('/pemasakan', function () {
     return view('pemasakan');
 });
+
+Route::get('/resep', function () {
+    return view('resep');
+});
