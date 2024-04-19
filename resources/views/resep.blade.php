@@ -479,36 +479,73 @@
                 <li class="step3"><div class="number-step">3</div>Durasi</li>
                 <li class="step4"><div class="number-step">4</div>Keterangan</li>
             </ul>
-            <div class="step" id="step1">
-                <div class="mb-3">
-                    <label for="koderesep">Kode resep:</label>
-                    <input type="text" id="koderesep" name="koderesep" class="form-control">
+            <div class="step-wrapper">
+                <div class="step" id="step1">
+                    <div class="mb-3">
+                        <label for="koderesep">Kode resep</label>
+                        <input type="text" id="koderesep" name="koderesep" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="namaresep">Nama resep</label>
+                        <input type="text" id="namaresep" name="namaresep" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="namaresep">Versi</label>
+                        <input type="text" id="versi" name="versi" class="form-control">
+                    </div>
+                    <div class="button-step d-flex justify-content-end">
+                        <button type="button" onclick="nextStep()" class="btn btn-primary font-weight-semibold">NEXT <i class="fa fa-chevron-right ml-2"></i></button>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="namaresep">Nama resep:</label>
-                    <input type="text" id="namaresep" name="namaresep" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="namaresep">Versi:</label>
-                    <input type="text" id="versi" name="versi" class="form-control">
-                </div>
-                <div class="button-step d-flex justify-content-end">
-                    <button type="button" onclick="nextStep()" class="btn btn-primary">Next</button>
-                </div>
-            </div>
 
-            <div class="step" id="step2">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br><br>
-                <button type="button" onclick="prevStep()" class="btn btn-secondary">Previous</button>
-                <button type="button" onclick="nextStep()" class="btn btn-primary">Next</button>
-            </div>
+                <div class="step" id="step2">
+                    <div class="mb-3">
+                        <label for="flip">Flip</label>
+                        <input type="text" id="flip" name="flip" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="biasa">Biasa</label>
+                        <input type="text" id="biasa" name="biasa" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="longgar">Longgar</label>
+                        <input type="text" id="longgar" name="longgar" class="form-control">
+                    </div>
+                    <div class="button-step d-flex justify-content-between">
+                        <button type="button" onclick="prevStep()" class="btn btn-secondary font-weight-semibold"><i class="fa fa-chevron-left mr-2"></i> BACK</button>
+                        <button type="button" onclick="nextStep()" class="btn btn-primary font-weight-semibold">NEXT <i class="fa fa-chevron-right ml-2"></i></button>
+                    </div>
+                </div>
 
-            <div class="step" id="step3">
-                <label for="alamat">Alamat:</label>
-                <input type="text" id="alamat" name="alamat"><br><br>
-                <button type="button" onclick="prevStep()" class="btn btn-secondary">Previous</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="step" id="step3">
+                    <div class="mb-3">
+                        <label for="durasimasak">Durasi masak</label>
+                        <input type="text" id="durasimasak" name="durasimasak" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="durasiminimal">Durasi minimal</label>
+                        <input type="text" id="durasiminimal" name="durasiminimal" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="durasimaksimal">Durasi maksimal</label>
+                        <input type="text" id="durasimaksimal" name="durasimaksimal" class="form-control">
+                    </div>
+                    <div class="button-step d-flex justify-content-between">
+                        <button type="button" onclick="prevStep()" class="btn btn-secondary font-weight-semibold"><i class="fa fa-chevron-left mr-2"></i> BACK</button>
+                        <button type="button" onclick="nextStep()" class="btn btn-primary font-weight-semibold">NEXT <i class="fa fa-chevron-right ml-2"></i></button>
+                    </div>
+                </div>
+
+                <div class="step" id="step4">
+                    <div class="mb-3">
+                        <label for="keterangan">Keterangan versi</label>
+                        <textarea name="keterangan" id="keterangan" cols="30" rows="7" class="form-control"></textarea>
+                    </div>
+                    <div class="button-step d-flex justify-content-between">
+                        <button type="button" onclick="prevStep()" class="btn btn-secondary font-weight-semibold"><i class="fa fa-chevron-left mr-2"></i> BACK</button>
+                        <button type="submit" class="btn btn-primary font-weight-semibold">SAVE</button>
+                    </div>
+                </div>
             </div>
         </form>
       </div>
@@ -528,9 +565,11 @@
     function showStep(stepIndex) {
         steps.forEach((step, index) => {
             if (index === stepIndex) {
-                step.style.display = "block";
+                // step.style.display = "block";
+                step.classList.add("active");
             } else {
-                step.style.display = "none";
+                // step.style.display = "none";
+                step.classList.remove("active");
             }
         });
         updateStepHeader(stepIndex);

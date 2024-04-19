@@ -897,10 +897,24 @@ input.check-trolli:checked ~ .check-info .check-icon {
   font-size: 14pt;
   vertical-align: middle;
 }
-
-
 .step {
-  display: none;
+  width: 0%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.step.active {
+  width: 100%;
+}
+.step-wrapper {
+  display: flex;
+  position: relative;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+.button-step {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
 }
 #resep-page div#tambahVersiModal .modal-body form button {
   min-width: 95px;
@@ -943,8 +957,11 @@ input.check-trolli:checked ~ .check-info .check-icon {
 div#tambahVersiModal .modal-header {
   border: 0;
   padding: 10px;
+  z-index: 1;
 }
-
+#tambahVersiModal .form-control{
+  font-size: 11pt;
+}
 .completed {
   color: #2aa04c;
 }
