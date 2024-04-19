@@ -374,18 +374,18 @@ body#pemasakan-page .legend-box {
   background: #e69a02 !important;
 }
 .btn-red,.btn-red:focus{
-  background: #f51007;
+  background: #f51007 !important;
   border-color: #e60c05 !important;
 }
 .btn-red:hover{
   background-color:#e60c05 !important ;
 }
 .btn-blue,.btn-blue:focus{
-  background: #192ade;
+  background: #192ade !important;
   border-color: #1222cc !important;
 }
 .btn-blue:hover{
-  background: #1222cc;
+  background: #1222cc !important;
 }
 .status-stop {
   font-size: 4rem;
@@ -794,7 +794,8 @@ table#resepTable .row-parent td:last-child,table#resepTable .row-parent td:nth-c
   border-color: transparent;
 }
 /*POPUP TAMBAH TROLLI*/
-#resep-page #tambahResep .modal-dialog {
+#resep-page #tambahResep .modal-dialog,
+#resep-page #editResep .modal-dialog {
   max-width: 600px;
 }
 #resep-page .modal-dialog {
@@ -981,4 +982,37 @@ div#tambahVersiModal .modal-header {
   border-radius: 50%;
   line-height: normal;
   margin-right: 7px;
+}
+
+/*HAPUS POPUP*/
+div#hapusResep .modal-dialog {
+  max-width: 450px;
+}
+div#hapusResep .modal-header {
+  border: 0;
+}
+div#hapusResep img {
+  width: 160px;
+  margin-bottom: 30px;
+}
+div#hapusResep h3 {
+  font-size: 15pt;
+  font-weight: 700;
+  color: #000;
+}
+
+/*ALERT RESEP POPUP*/
+div#alertResep .modal-dialog {
+  max-width: 450px;
+}
+div#alertResep .modal-header {
+  border: 0;
+}
+div#alertResep img {
+  width: 160px;
+  margin-bottom: 30px;
+}
+#alertResep .modal-body form button {
+  background: #3657c9 !important;
+  border-color: #3657c9 !important;
 }

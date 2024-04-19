@@ -46,6 +46,8 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
+                                            
+                                        <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#alertResep">alert popup</button>
                                             <div class="table-wrap">
                                             <table id="resepTable" class="table" style="">
                                                 <thead class="text-nowrap text-center">
@@ -90,8 +92,8 @@
                                                         <td>119</td>
                                                         <td>121</td>
                                                         <td rowspan="5" class="text-nowrap">
-                                                            <a href="" class="btn btn-blue px-2 text-white btn-action"><span class="material-symbols-outlined">edit_square</span></a>
-                                                            <a href="" class="btn btn-red px-2 text-white btn-action"><span class="material-symbols-outlined">delete</span></a>
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
                                                             <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
                                                         </td>
                                                     </tr>
@@ -178,8 +180,8 @@
                                                         <td>119</td>
                                                         <td>121</td>
                                                         <td rowspan="3" class="text-nowrap">
-                                                            <a href="" class="btn btn-blue px-2 text-white btn-action"><span class="material-symbols-outlined">edit_square</span></a>
-                                                            <a href="" class="btn btn-red px-2 text-white btn-action"><span class="material-symbols-outlined">delete</span></a>
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
                                                             <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
                                                         </td>
                                                     </tr>
@@ -234,8 +236,8 @@
                                                         <td>119</td>
                                                         <td>121</td>
                                                         <td rowspan="4" class="text-nowrap">
-                                                            <a href="" class="btn btn-blue px-2 text-white btn-action"><span class="material-symbols-outlined">edit_square</span></a>
-                                                            <a href="" class="btn btn-red px-2 text-white btn-action"><span class="material-symbols-outlined">delete</span></a>
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
                                                             <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
                                                         </td>
                                                     </tr>
@@ -455,6 +457,82 @@
             <div class="d-flex justify-content-between mb-3 pt-3">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Resep -->
+<div class="modal fade" id="editResep" tabindex="-1" role="dialog" aria-labelledby="editResepLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editResepLabel">Edit Resep</h5>
+        <div class="text-gray-900">Input nama resep dan kode resep pada tempat yang telah disediakan</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            <div class="mb-3">
+                <label for="kode-resep">Kode Resep</label>
+                <input type="text" class="form-control" id="kode-resep" name="kode-resep">
+            </div>
+            <div class="mb-3">
+                <label for="nama-resep">Nama Resep</label>
+                <textarea type="text" class="form-control" id="nama-resep" name="nama-resep"></textarea>
+            </div>
+            <div class="d-flex justify-content-between mb-3 pt-3">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Hapus Resep -->
+<div class="modal fade" id="hapusResep" tabindex="-1" role="dialog" aria-labelledby="hapusResepLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="{{ asset('images/trash-image.jpg') }}" alt="">
+        <h3>Apakah kamu yakin menghapus resep dengan kode resep "KC SURYA KING MRAH SAEKCUL KCL GNDG"?</h3>
+        <form action="">
+            <div class="d-flex justify-content-around mb-3 pt-3">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary btn-red">Delete</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Alert Resep -->
+<div class="modal fade" id="alertResep" tabindex="-1" role="dialog" aria-labelledby="alertResepLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="{{ asset('images/setting-image.jpg') }}" alt="">
+        <div class="font-weight-semibold text-gray-900 pb-3">Aksi tidak dapat dilakukan<br/> resep sedang proses pemasakan <br/>tunggu proses selesai untuk melakukan aksi</div>
+        <form action="">
+            <div class="d-flex justify-content-center mb-3 pt-3">
+                <button type="button" class="btn btn-primary btn-blue" data-dismiss="modal">Close</button>
             </div>
         </form>
       </div>
