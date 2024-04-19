@@ -722,18 +722,26 @@ table#resepTable tr:first-child :last-child{
   border-right: 0;
 }
 table#resepTable th {
-  padding: 3px 5px;
+  padding: 3px 4px;
   background: #e1e9fe;
   font-weight: normal;
   color: #333;
   border-right: 1px solid #aabece;
   border-bottom: 1px solid #aabece;
   font-size: 10pt;
+  min-width: 60px;
 }
-.data-resep .card {
+.data-resep .card  {
   border-radius: 12px;
-  border: 1px solid #b5c0cb;
+  background: transparent;
+  border: 0;
 }
+.data-resep .card .table-wrap{
+  border: 1px solid #b5c0cb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+} 
 .data-resep .card-body {
   padding: 0;
 }
@@ -745,8 +753,215 @@ table#resepTable td {
   border-bottom: 1px solid #b5c0cb;
   font-weight: 600;
   color: #666;
-  padding: 8px 10px;
+  padding: 5px 10px;
 }
-table#resepTable td:last-child {
+table#resepTable .row-parent td:last-child {
   border-right: 0;
+}
+table#resepTable .row-parent td:first-child {
+  width: 30px;
+}
+table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
+  padding-left: 15px;
+}
+body#resep-page .search-bar input {
+  width: 400px;
+}
+.btn-action{min-width: 35px;}
+.row-disable td{
+  background: #eee;
+  color: #aaa !important;
+}
+table#resepTable .row-parent td:last-child,table#resepTable .row-parent td:nth-child(1),table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
+  background: #fff;
+}
+.pagination-table select {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 3px 3px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+.pagination-table .page-link {
+  background: transparent;
+  border: 0;
+  color: #999;
+}
+.pagination-table .page-item.active .page-link,.pagination-table .page-link:hover {
+  z-index: 3;
+  color: #000;
+  background-color: transparent;
+  border-color: transparent;
+}
+/*POPUP TAMBAH TROLLI*/
+#resep-page #tambahResep .modal-dialog {
+  max-width: 600px;
+}
+#resep-page .modal-dialog {
+  max-width: 550px;
+  border: 0 !important;
+  box-shadow: none;
+}
+#resep-page .modal-content {
+  border: 0;
+  border-radius: 15px;
+}
+#resep-page .modal-header {
+  display: block;
+  position: relative;
+  padding: 18px 25px;
+}
+#resep-page .modal-header h5 {
+  font-weight: 600;
+  color: #000;
+}
+#resep-page .modal-header button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#resep-page .modal-body {
+  padding: 20px 25px;
+}
+#resep-page .modal-body label {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0;
+}
+.check-icon {
+  border: 1px solid #aaa;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.check-status > div {
+  font-weight: bold;
+  width: 54px;
+  height: 30px;
+  background: #eaf0ff;
+  border-radius: 5px;
+  display: flex;
+  font-size: 11pt;
+  align-items: center;
+  justify-content: center;
+}
+.check-trolli{
+  width: 0;
+  height: 0;
+}
+.check-status .off{
+  display: flex;
+  opacity: 0.5;
+}
+.check-status .on{
+  display: none;
+}
+input.check-trolli:checked ~ .check-info .off {
+  display: none;
+}
+input.check-trolli:checked ~ .check-info .on {
+  display: flex;
+}
+input.check-trolli:checked ~ .check-info .check-icon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 11px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(46deg);
+  left: 7px;
+  top: 3px;
+}
+
+input.check-trolli:checked ~ .check-info .check-icon {
+  background: #3199ff;
+  border-color: #3199ff;
+  position: relative;
+}
+#resep-page .modal-body form button {
+  min-width: 95px;
+  padding: 7px 10px;
+  background: #0b4aeb;
+  border-color: #0b4aeb;
+}
+#resep-page .modal-body form button.btn-secondary {
+  border-color: #aaa;
+  background: transparent;
+  color: #858796;
+}
+.btn span.material-symbols-outlined {
+  font-size: 14pt;
+  vertical-align: middle;
+}
+
+
+.step {
+  display: none;
+}
+#resep-page div#tambahVersiModal .modal-body form button {
+  min-width: 95px;
+  padding: 7px 10px;
+  background: #2aa04c;
+  border-color: #2aa04c;
+}
+#resep-page div#tambahVersiModal .modal-body form button.btn-secondary {
+  border-color: #aaa;
+  background: transparent;
+  color: #858796;
+}
+.step-header {
+  list-style-type: none;
+  padding: 0;
+  border-bottom: 1px solid #e3e6f0;
+  display: flex;
+  align-items: center;
+  padding-bottom: 25px;
+}
+
+.step-header li {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  font-weight: 500;
+}
+.step-header li:last-child:after{
+  display: none;
+}
+.step-header li:after {
+  content: "\f054";
+  margin-left: 16px;
+  margin-right: 6px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 10pt;
+  color: #999 !important;
+}
+div#tambahVersiModal .modal-header {
+  border: 0;
+  padding: 10px;
+}
+
+.completed {
+  color: #2aa04c;
+}
+.completed .number-step{
+  background: #2aa04c;
+  color: #fff;
+}
+.number-step {
+  font-weight: 600;
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  line-height: normal;
+  margin-right: 7px;
 }
