@@ -10747,6 +10747,10 @@ a:focus {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.btn{
+  font-size: 11pt;
+}
+
 .btn-circle {
   border-radius: 100%;
   height: 2.5rem;

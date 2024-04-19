@@ -4,7 +4,8 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Datatable JavaScript-->
-    <script src="{{ asset('vendor/datatables/jquery.dataTables.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.1.2/js/dataTables.rowGroup.min.js"></script>
 
     <!-- JavaScript Select2 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
@@ -17,8 +18,16 @@
 
 
     <script>
-        
-    let table = new DataTable('#dataTable');
+        // Call the dataTables jQuery plugin
+        $(document).ready(function() {
+            $('#dataTable').DataTable({
+                "scrollX": true,
+                "ordering": false // Menonaktifkan pengurutan
+            });
+            
+            
+        });
+
     </script>
 </body>
 

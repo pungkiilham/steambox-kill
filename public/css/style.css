@@ -710,3 +710,43 @@ div#modalMessage {
     border-right: 1px solid #ddd;
     color: #000;
 }
+
+/* Resep Page */
+table#resepTable{
+  margin-bottom: 0;
+}
+#resepTable td,#resepTable th{
+  vertical-align: middle !important;
+}
+table#resepTable tr:first-child :last-child{
+  border-right: 0;
+}
+table#resepTable th {
+  padding: 3px 5px;
+  background: #e1e9fe;
+  font-weight: normal;
+  color: #333;
+  border-right: 1px solid #aabece;
+  border-bottom: 1px solid #aabece;
+  font-size: 10pt;
+}
+.data-resep .card {
+  border-radius: 12px;
+  border: 1px solid #b5c0cb;
+}
+.data-resep .card-body {
+  padding: 0;
+}
+table#resepTable tr:nth-child(2n) td {
+  background-color: #f8f9fd;
+}
+table#resepTable td {
+  border-right: 1px solid #b5c0cb;
+  border-bottom: 1px solid #b5c0cb;
+  font-weight: 600;
+  color: #666;
+  padding: 8px 10px;
+}
+table#resepTable td:last-child {
+  border-right: 0;
+}
