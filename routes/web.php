@@ -28,3 +28,7 @@ Route::get('/pemasakan', function () {
 Route::get('/resep', function () {
     return view('resep');
 });
+
+Route::get('/logproduksi', function () {
+    return view('logproduksi');
+});

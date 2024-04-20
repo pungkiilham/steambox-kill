@@ -10350,6 +10350,13 @@ a:focus {
   display: block;
 }
 
+.sidebar .nav-item .nav-link span.material-symbols-outlined {
+  font-size: 1.1rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
 .sidebar .nav-item.active .nav-link {
   font-weight: 600;
 }

@@ -11,23 +11,33 @@
 
 <li class="nav-item mb-2">
     <a class="nav-link" href="{{ url('/') }}">
-        <i class="fas fa-fw fa-th-large"></i>
-        <span>Operator</span></a>
+        <span class="material-symbols-outlined">lists</span>
+        <span>Operator</span>
+    </a>
 </li>
 <li class="nav-item mb-2" id="steambox-menu">
     <a class="nav-link" href="{{ url('/steambox') }}">
-        <i class="fas fa-fw fa-th-large"></i>
-        <span>Rekap Steambox</span></a>
+        <span class="material-symbols-outlined">grid_view</span>
+        <span>Rekap Steambox</span>
+    </a>
 </li>
 <li class="nav-item mb-2" id="pemasakan-menu">
     <a class="nav-link" href="{{ url('/pemasakan') }}">
-        <i class="fas fa-fw fa-layer-group"></i>
-        <span>Pemasakan</span></a>
+        <span class="material-symbols-outlined">stacks</span>
+        <span>Pemasakan</span>
+    </a>
 </li>
 <li class="nav-item mb-2" id="resep-menu">
     <a class="nav-link" href="{{ url('/resep') }}">
-        <i class="fas fa-fw fa-file-alt"></i>
-        <span>Resep</span></a>
+        <span class="material-symbols-outlined">assignment</span>
+        <span>Resep</span>
+    </a>
+</li>
+<li class="nav-item mb-2" id="logproduksi-menu">
+    <a class="nav-link" href="{{ url('/logproduksi') }}">
+        <span class="material-symbols-outlined">find_in_page</span>
+        <span>Log Produksi</span>
+    </a>
 </li>
 
 </ul>

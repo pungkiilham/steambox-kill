@@ -49,7 +49,7 @@
                                             
                                         <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#alertResep">alert popup</button>
                                             <div class="table-wrap">
-                                            <table id="resepTable" class="table" style="">
+                                            <table id="resepTable" class="defaultTable table" style="">
                                                 <thead class="text-nowrap text-center">
                                                     <tr>
                                                         <th rowspan="2" style="min-width:35px !important">No.</th>

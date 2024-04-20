@@ -1,5 +1,5 @@
 body{
-  font-size: 11pt;
+  font-size: 14px;
 }
 
 /*SIDEBAR*/
@@ -486,7 +486,7 @@ td.produksi-comment {
   padding: 8px 40px 8px 40px;
 }
 .search-bar input {
-  font-size: 11pt;
+  font-size: 14px;
   border: 1px solid #ddd !important;
   /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.04); */
   border-radius: 9px !important;
@@ -712,16 +712,16 @@ div#modalMessage {
 }
 
 /* Resep Page */
-table#resepTable{
+table.defaultTable{
   margin-bottom: 0;
 }
-#resepTable td,#resepTable th{
+.defaultTable td,.defaultTable th{
   vertical-align: middle !important;
 }
-table#resepTable tr:first-child :last-child{
+table.defaultTable tr:first-child :last-child{
   border-right: 0;
 }
-table#resepTable th {
+table.defaultTable th {
   padding: 3px 4px;
   background: #e1e9fe;
   font-weight: normal;
@@ -741,6 +741,7 @@ table#resepTable th {
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
+  overflow-x: auto;
 } 
 .data-resep .card-body {
   padding: 0;
@@ -748,23 +749,24 @@ table#resepTable th {
 table#resepTable tr:nth-child(2n) td {
   background-color: #f8f9fd;
 }
-table#resepTable td {
+table.defaultTable td {
   border-right: 1px solid #b5c0cb;
   border-bottom: 1px solid #b5c0cb;
   font-weight: 600;
-  color: #666;
+  color: #444;
   padding: 5px 10px;
 }
-table#resepTable .row-parent td:last-child {
+table.defaultTable .row-parent td:last-child {
   border-right: 0;
 }
-table#resepTable .row-parent td:first-child {
+table.defaultTable .row-parent td:first-child {
   width: 30px;
 }
 table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
   padding-left: 15px;
 }
-body#resep-page .search-bar input {
+body#resep-page .search-form input,
+body#logproduksi-page .search-form input {
   width: 400px;
 }
 .btn-action{min-width: 35px;}
@@ -772,7 +774,7 @@ body#resep-page .search-bar input {
   background: #eee;
   color: #aaa !important;
 }
-table#resepTable .row-parent td:last-child,table#resepTable .row-parent td:nth-child(1),table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
+table.defaultTable .row-parent td:last-child,table.defaultTable .row-parent td:nth-child(1),table.defaultTable .row-parent td:nth-child(2),table.defaultTable .row-parent td:nth-child(3){
   background: #fff;
 }
 .pagination-table select {
@@ -1015,4 +1017,14 @@ div#alertResep img {
 #alertResep .modal-body form button {
   background: #3657c9 !important;
   border-color: #3657c9 !important;
+}
+button#downloadExcel.active {
+  border: 1px solid #0eb142;
+  background: #d8f6e2 !important;
+  color: #0eb142 !important;
+}
+button#downloadPdf.active {
+  border: 1px solid #b10e0e;
+  background: #f6d8d8 !important;
+  color: #b10e0e !important;
 }
