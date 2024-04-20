@@ -7,8 +7,8 @@
 
     <!-- Topbar Title -->
     <div class="title-topbar">
-        <h1 class="font-weight-semibold text-gray-900 h3 mb-0">Welcome Back, Admin Siap</h1>
-        <div class="text-muted">Here is information about all your process</div>
+        {!! isset($title ) ? $title : '<h1 class="font-weight-semibold text-gray-900 h3 mb-0">Welcome Back, Admin Siap</h1>' !!}
+        {!! isset($subtitle) ? $subtitle : '<div class="text-muted">Here is information about all your process</div>' !!}
     </div>
 
     <!-- Topbar Navbar -->

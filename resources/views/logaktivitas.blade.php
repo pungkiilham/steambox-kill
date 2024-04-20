@@ -1,6 +1,6 @@
 @include('header')
 
-<body id="logproduksi-page">
+<body id="logmaintenance-page">
 
 <!-- Page Wrapper -->
 <div id="wrapper">
@@ -15,7 +15,9 @@
     <div id="content">
 
         <!-- Topbar -->
-        @include('navbar')
+        @include('navbar', ['title' => '<h1 class="font-weight-semibold text-gray-900 h2 mb-0"><span class="h4 font-weight-semibold text-gray-900 ">Log Aktivitas</span></h1>', 'subtitle' => ''])
+
+
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
@@ -56,84 +58,30 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="table-wrap">
-                                            <table id="logproduksiTable" class="defaultTable table" style="">
+                                            <table id="logmaintenanceTable" class="defaultTable table" style="">
                                                 <thead class="text-nowrap text-center">
                                                     <tr>
-                                                        <th rowspan="2">Tanggal</th>
-                                                        <th rowspan="2">No Steambox</th>
-                                                        <th colspan="4">Detail Produk</th>
-                                                        <th colspan="3">Item Produk</th>
-                                                        <th colspan="8">Detail Proses</th>
-                                                        <th rowspan="2">Keterangan Proses</th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th style="min-width:130px">kode resep</th>
-                                                        <th>nama resep</th>
-                                                        <th>versi</th>
-                                                        <th>trolli</th>
-                                                        <th>batch</th>
-                                                        <th>warna</th>
-                                                        <th>qty(gld)</th>
-                                                        <th>suhu awal</th>
-                                                        <th>suhu aktual</th>
-                                                        <th>jam mulai</th>
-                                                        <th>durasi pemanasan</th>
-                                                        <th>jam pemasakan</th>
-                                                        <th>durasi pemasakan</th>
-                                                        <th>tambahan waktu</th>
-                                                        <th>jam selesai</th>
+                                                        <th style="width:10px">No</th>
+                                                        <th>Tanggal</th>
+                                                        <th>Waktu</th>
+                                                        <th>User/PIC</th>
+                                                        <th>Keterangan Aktivitas</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="text-center text-nowrap text-gray-900">
-                                                    <tr class="row-parent">
-                                                        <td>22/03/2024</td>
-                                                        <td class="text-left">steambox 3</td>
-                                                        <td class="text-left text-wrap">BAWANG BOREL</td>
-                                                        <td>Bawang Borel</td>
-                                                        <td>3</td>
-                                                        <td>Custom - sisa batch</td>
+                                                    <tr>
                                                         <td>1</td>
-                                                        <td>merah kuning hijau</td>
-                                                        <td>60</td>
-                                                        <td>92</td>
-                                                        <td>92</td>
-                                                        <td>10:30:50</td>
-                                                        <td>00:20:00</td>
-                                                        <td>10:30:50</td>
-                                                        <td>01:00:00</td>
-                                                        <td>+ 00:30:50</td>
-                                                        <td>10:20:00</td>
-                                                        <td><div class="alert alert-danger px-2 py-1 m-0 d-inline">Stop pemasakan</div></td>
-                                                    </tr>
-                                                    <tr class="row-parent">
-                                                        <td rowspan="3">22/03/2024</td>
-                                                        <td rowspan="3" class="text-left">steambox 2</td>
-                                                        <td rowspan="3" class="text-left text-wrap">KCSURYA KNG</td>
-                                                        <td rowspan="3">Kancing Surya Kenanga</td>
-                                                        <td rowspan="3">3</td>
-                                                        <td rowspan="3">Longgar</td>
-                                                        <td>1</td>
-                                                        <td>putih merah</td>
-                                                        <td>80</td>
-                                                        <td rowspan="3">92</td>
-                                                        <td rowspan="3">92</td>
-                                                        <td rowspan="3">10:30:50</td>
-                                                        <td rowspan="3">00:20:00</td>
-                                                        <td rowspan="3">10:30:50</td>
-                                                        <td rowspan="3">01:00:00</td>
-                                                        <td rowspan="3">+ 00:30:50</td>
-                                                        <td rowspan="3">10:20:00</td>
-                                                        <td rowspan="3"><div class="alert alert-success px-2 py-1 m-0 d-inline">Selesai</div></td>
+                                                        <td>12 Maret 2024</td>
+                                                        <td>09:31:14</td>
+                                                        <td>Admin</td>
+                                                        <td>Login</td>
                                                     </tr>
                                                     <tr>
                                                         <td>2</td>
-                                                        <td>putih merah</td>
-                                                        <td>60</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>putih merah</td>
-                                                        <td>10</td>
+                                                        <td>12 Maret 2024</td>
+                                                        <td>10:51:12</td>
+                                                        <td>Admin</td>
+                                                        <td>Mulai pemasakan "SBKKO" di "Steambox 2"</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -188,7 +136,7 @@
 
 <script>
 
-	$('#logproduksi-menu').addClass('active');	
+	$('#logaktivitas-menu').addClass('active');	
 
     
     

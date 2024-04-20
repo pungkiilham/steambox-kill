@@ -32,3 +32,15 @@ Route::get('/resep', function () {
 Route::get('/logproduksi', function () {
     return view('logproduksi');
 });
+
+Route::get('/logmaintenance', function () {
+    return view('logmaintenance');
+});
+
+Route::get('/logdetail', function () {
+    return view('logmaintenancedetail');
+});
+
+Route::get('/logaktivitas', function () {
+    return view('logaktivitas');
+});

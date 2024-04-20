@@ -39,6 +39,18 @@
         <span>Log Produksi</span>
     </a>
 </li>
+<li class="nav-item mb-2" id="logmaintenance-menu">
+    <a class="nav-link" href="{{ url('/logmaintenance') }}">
+        <span class="material-symbols-outlined">pages</span>
+        <span>Log Maintenance</span>
+    </a>
+</li>
+<li class="nav-item mb-2" id="logaktivitas-menu">
+    <a class="nav-link" href="{{ url('/logaktivitas') }}">
+        <span class="material-symbols-outlined">group</span>
+        <span>Log Aktivitas</span>
+    </a>
+</li>
 
 </ul>
 <!-- End of Sidebar -->

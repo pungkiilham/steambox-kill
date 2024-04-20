@@ -494,6 +494,14 @@ td.produksi-comment {
   height: auto;
   background: #fff !important;
 }
+.search-bar select{
+  font-size: 14px;
+  border: 1px solid #ddd !important;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.04); */
+  border-radius: 9px !important;
+  height: auto;
+  background: #fff !important;
+}
 form.search-form button {
   background: transparent;
   border: 0;
@@ -728,7 +736,7 @@ table.defaultTable{
 .defaultTable td,.defaultTable th{
   vertical-align: middle !important;
 }
-table.defaultTable tr:first-child :last-child{
+table.defaultTable tr:first-child td:last-child{
   border-right: 0;
 }
 table.defaultTable th {
@@ -1041,4 +1049,67 @@ button#downloadPdf.active {
   border: 1px solid #b10e0e;
   background: #f6d8d8 !important;
   color: #b10e0e !important;
+}
+
+/* Log Maintenance */
+#logmaintenanceTable td:last-child .btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#logmaintenanceTable td:last-child .btn:last-child{
+  margin-bottom: 0;
+}
+#logmaintenanceTable td:last-child {
+  border-right: 0;
+  padding: 16px;
+}
+#logmaintenance-page .modal-header {
+  display: block;
+  position: relative;
+  padding: 18px 25px;
+}
+#logmaintenance-page .modal-dialog {
+  max-width: 450px;
+  border: 0 !important;
+  box-shadow: none;
+}
+#logmaintenance-page .modal-body {
+  padding: 20px 25px;
+}
+#logmaintenance-page .modal-header h5 {
+  font-weight: 600;
+  color: #000;
+}
+#logmaintenance-page .modal-body label {
+  font-size: 12pt;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0;
+}
+#logmaintenance-page .modal-body form button {
+  min-width: 95px;
+  padding: 7px 10px;
+  background: #0b4aeb;
+  border-color: #0b4aeb;
+}
+#logmaintenance-page .modal-body form button.btn-secondary {
+  border-color: #aaa;
+  background: transparent;
+  color: #858796;
+}
+#logmaintenance-page .modal-content {
+  border: 0;
+  border-radius: 15px;
+}
+.modal-content select,.modal-content textarea{
+  font-size: 14px;
+}
+#logmaintenance-page .modal-header button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
