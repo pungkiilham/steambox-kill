@@ -116,6 +116,7 @@ table.table-data-operator tr.alert:nth-child(3) .countdown{
   border-radius: 10px;
   font-size: 14px;
   color: #000;
+  justify-content: space-evenly;
   font-weight: 500;
   padding: 6px 0;
   width: calc(100% - 270px);
@@ -327,7 +328,7 @@ span.select2-search.select2-search--dropdown:before {
 
 /*PEMASAKAN PAGE*/
 body#pemasakan-page .legend-box label {
-  padding: 5px 13px;
+  /* padding: 5px 13px; */
 }
 body#pemasakan-page .legend-box {
   width: calc(100% - 120px);
@@ -712,6 +713,15 @@ div#modalMessage {
 }
 
 /* Resep Page */
+.defaultTable tr:hover td {
+  background: #efefef !important;
+}
+#resepTable tr.row-parent:hover td:nth-child(1),
+#resepTable tr.row-parent:hover td:nth-child(2),
+#resepTable tr.row-parent:hover td:nth-child(3),
+#resepTable tr.row-parent:hover td:last-child{
+  background: #fff !important;
+}
 table.defaultTable{
   margin-bottom: 0;
 }
@@ -762,8 +772,12 @@ table.defaultTable .row-parent td:last-child {
 table.defaultTable .row-parent td:first-child {
   width: 30px;
 }
+table#resepTable .row-parent td:nth-child(1),table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
+  background: #fff !important;
+}
 table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
   padding-left: 15px;
+  
 }
 body#resep-page .search-form input,
 body#logproduksi-page .search-form input {

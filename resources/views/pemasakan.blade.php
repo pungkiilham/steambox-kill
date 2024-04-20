@@ -52,22 +52,28 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center legend-box">
                                     <div class="legend-steambox">
-                                        <label for="checkbox1" id="label1" class="legend-title"><span class="color-legend" style="background:#fff"></span>Belum terisi</label>
+                                        <input type="checkbox" id="checkbox1">
+                                        <label for="checkbox1" id="label1" class="legend-title"><span class="color-legend" style="background:#fff"></span>Belum terisi<span class="order"></span></label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <label for="checkbox2" id="label2" class="legend-title"><span class="color-legend" style="background:#ecff0f"></span>Pemanasan</label>
+                                        <input type="checkbox" id="checkbox2">
+                                        <label for="checkbox2" id="label2" class="legend-title"><span class="color-legend" style="background:#ecff0f"></span>Pemanasan<span class="order"></span></label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <label for="checkbox3" id="label3" class="legend-title"><span class="color-legend" style="background:#2be172"></span>Pemasakan</label>
+                                        <input type="checkbox" id="checkbox3">
+                                        <label for="checkbox3" id="label3" class="legend-title"><span class="color-legend" style="background:#2be172"></span>Pemasakan<span class="order"></span></label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <label for="checkbox4" id="label4" class="legend-title"><span class="color-legend" style="background:#39e8f8"></span>15 Menit pemasakan berakhir</label>
+                                        <input type="checkbox" id="checkbox4">
+                                        <label for="checkbox4" id="label4" class="legend-title"><span class="color-legend" style="background:#39e8f8"></span>15 Menit pemasakan berakhir<span class="order"></span></label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#e10200"></span>Terjadi error</label>
+                                        <input type="checkbox" id="checkbox5">
+                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#e10200"></span>Terjadi error<span class="order"></span></label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#894ddd"></span>Kendala produksi</label>
+                                        <input type="checkbox" id="checkbox6">
+                                        <label for="checkbox6" id="label6" class="legend-title"><span class="color-legend" style="background:#894ddd"></span>Kendala produksi<span class="order"></span></label>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center"><span class="material-symbols-outlined">swap_vert</span></button>
@@ -1136,7 +1142,37 @@
 		);
 		event.preventDefault(); // Menghentikan default behavior tombol tambah
 	});
+			
+	var checkboxes = document.querySelectorAll('input[type=checkbox]');
+	var checkedOrder = [];
+
+	checkboxes.forEach(function(checkbox, index) {
+		var label = document.getElementById('label' + (index + 1));
+		var orderSpan = label.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label
 		
+		checkbox.addEventListener('change', function() {
+			if (checkbox.checked) {
+				if (!checkedOrder.includes(index)) {
+					checkedOrder.push(index);
+				}
+			} else {
+				var position = checkedOrder.indexOf(index);
+				if (position !== -1) {
+					checkedOrder.splice(position, 1);
+				}
+			}
+			
+			// Perbarui urutan di dalam span
+			checkedOrder.forEach(function(checkedIndex, order) {
+				var checkedLabel = document.getElementById('label' + (checkedIndex + 1));
+				var checkedOrderSpan = checkedLabel.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label yang dicentang
+				checkedOrderSpan.textContent = order + 1;
+			});
+			
+			// Perbarui urutan di dalam span jika kotak centang diklik
+			orderSpan.textContent = checkbox.checked ? checkedOrder.indexOf(index) + 1 : '';
+		});
+	});
 
 </script>
 
