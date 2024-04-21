@@ -58,6 +58,7 @@ table.table-data-operator tr:last-child td{
 }
 table.table-data-operator td:last-child{
   border-right: 0px solid #aaa;
+  min-width: 32vw;
 }
 table.table-data-operator td{
   vertical-align: middle;
@@ -291,11 +292,15 @@ span.select2-search.select2-search--dropdown:before {
 .data-steambox .card.error {
   border:2px solid #e10200;
 }
+.data-steambox .card.active {
+  background: #fff;
+}
 .data-steambox .card {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) !important;
   margin-bottom: 6px;
+  background: #f7f7f7;
 }
 .data-steambox td:nth-child(2){
   padding-left: 5px;
@@ -328,7 +333,10 @@ span.select2-search.select2-search--dropdown:before {
 
 /*PEMASAKAN PAGE*/
 body#pemasakan-page .legend-box label {
-  /* padding: 5px 13px; */
+  padding: 5px 13px;
+}
+.bg-red{
+  background: #fe0000 !important;
 }
 body#pemasakan-page .legend-box {
   width: calc(100% - 120px);
@@ -485,7 +493,13 @@ td.produksi-comment {
 }
 .search-form input{
   padding: 8px 40px 8px 40px;
+  font-size: 11pt;
 }
+div#listWarna .search-form input {
+  height: auto;
+  border-radius: 6px;
+}
+
 .search-bar input {
   font-size: 14px;
   border: 1px solid #ddd !important;
@@ -538,6 +552,9 @@ div#mulaiTugasBaru input, div#mulaiTugasBaru select {
   padding: 16px 35px;
   border-radius: 20px;
   border: 0;
+}
+#listWarna .modal-dialog .modal-content {
+  padding: 0;
 }
 #pemasakan-page .modal-title {
   font-weight: 600;
@@ -616,6 +633,93 @@ button#closeButton{
   border: 1px solid #aaa;
   border-radius: 5px;
   margin-top: -4px;
+}
+#tambahKeterangan .modal-header .close,
+#stopPemasakan .modal-header .close,
+#tambahWaktu .modal-header .close {
+  position: absolute;
+  right: 15px;
+  top: 16px;
+}
+#tambahKeterangan .modal-body form button.btn-secondary {
+  border-color: #aaa;
+  background: transparent;
+  color: #858796;
+}
+#tambahWarna .modal-header,
+#listWarna .modal-header {
+  display: block;
+  position: relative;
+  padding: 18px 25px;
+}
+#tambahWarna .modal-header button.close,
+#listWarna .modal-header button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+#tambahWarna .modal-content,
+#listWarna .modal-content {
+  padding: 0 !important;
+}
+#tambahWarna .modal-body,
+#listWarna .modal-body {
+  padding: 20px 25px;
+}
+div#list-warna th {
+  padding: 7px 7px;
+  background: #f5f5f5;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  border-top: 0;
+}
+div#list-warna{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+div#list-warna td:last-child,
+div#list-warna th:last-child{
+  border-right: 0;
+}
+div#list-warna table .btn {
+  padding: 2px 4px !important;
+  background: #999 !important;
+}
+div#list-warna td {
+  border-right: 1px solid #ccc;
+  color: #000;
+  font-weight: 600;
+  padding: 7px 10px;
+  vertical-align: middle;
+}
+#tambahWarna .modal-body form button {
+  min-width: 95px;
+  padding: 7px 10px;
+}
+#tambahWarna .modal-body form button.btn-primary {
+  background: #0b4aeb;
+  border-color: #0b4aeb;
+}
+#tambahWarna .modal-body form button.btn-secondary {
+  border-color: #aaa;
+  background: transparent;
+  color: #858796;
+}
+span.remove-button {
+  background: #eee;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+button#addButton {
+  background: #313e4e !important;
+  border-color: #313e4e !important;
 }
 
 /*select2 modal*/
@@ -727,7 +831,7 @@ div#modalMessage {
 #resepTable tr.row-parent:hover td:nth-child(1),
 #resepTable tr.row-parent:hover td:nth-child(2),
 #resepTable tr.row-parent:hover td:nth-child(3),
-#resepTable tr.row-parent:hover td:last-child{
+#resepTable tr.row-parent:hover td:nth-child(4){
   background: #fff !important;
 }
 table.defaultTable{
@@ -1059,6 +1163,7 @@ button#downloadPdf.active {
   justify-content: center;
   font-size: 14px;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 #logmaintenanceTable td:last-child .btn:last-child{
   margin-bottom: 0;

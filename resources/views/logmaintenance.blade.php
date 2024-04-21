@@ -74,8 +74,8 @@
                                                     <tr>
                                                         <th>No</th>
                                                         <th>Nomor SB</th>
-                                                        <th>Hour 1</th>
-                                                        <th>Hour 2</th>
+                                                        <th>Jam Akumulasi</th>
+                                                        <th>Jam Menuju Maintenance</th>
                                                         <th>Keterangan Produksi</th>
                                                         <th>Keterangan Maintenance</th>
                                                         <th>Status</th>

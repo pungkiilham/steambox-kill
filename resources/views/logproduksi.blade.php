@@ -87,8 +87,8 @@
                                                 <tbody class="text-center text-nowrap text-gray-900">
                                                     <tr class="row-parent">
                                                         <td>22/03/2024</td>
-                                                        <td class="text-left">steambox 3</td>
-                                                        <td class="text-left text-wrap">BAWANG BOREL</td>
+                                                        <td class="">steambox 3</td>
+                                                        <td class="text-wrap">BAWANG BOREL</td>
                                                         <td>Bawang Borel</td>
                                                         <td>3</td>
                                                         <td>Custom - sisa batch</td>
@@ -107,8 +107,8 @@
                                                     </tr>
                                                     <tr class="row-parent">
                                                         <td rowspan="3">22/03/2024</td>
-                                                        <td rowspan="3" class="text-left">steambox 2</td>
-                                                        <td rowspan="3" class="text-left text-wrap">KCSURYA KNG</td>
+                                                        <td rowspan="3" class="">steambox 2</td>
+                                                        <td rowspan="3" class="text-wrap">KCSURYA KNG</td>
                                                         <td rowspan="3">Kancing Surya Kenanga</td>
                                                         <td rowspan="3">3</td>
                                                         <td rowspan="3">Longgar</td>

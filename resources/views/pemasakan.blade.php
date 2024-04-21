@@ -44,36 +44,36 @@
                                     </div>
                                     <button class="btn bg-white text-gray-700 py-1 shadow"><i class="fa fa-save"></i></button>
                                     <div class="button-header ml-4">
-                                        <button class="btn bg-white text-gray-600 py-1 shadow"><i class="fa fa-list"></i> List Warna</button>
-                                        <button class="btn bg-white text-gray-600 py-1 shadow ml-1"><i class="fa fa-plus"></i> Add Warna</button>
+                                        <button class="btn bg-white text-gray-600 py-1 shadow"  data-toggle="modal" data-target="#listWarna" type="button"><i class="fa fa-list"></i> List Warna</button>
+                                        <button class="btn bg-white text-gray-600 py-1 shadow ml-1"  data-toggle="modal" data-target="#tambahWarna" type="button"><i class="fa fa-plus"></i> Add Warna</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex align-items-center legend-box">
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox1">
-                                        <label for="checkbox1" id="label1" class="legend-title"><span class="color-legend" style="background:#fff"></span>Belum terisi<span class="order"></span></label>
+                                        <input type="radio" id="checkbox1" name="legend-input">
+                                        <label for="checkbox1" id="label1" class="legend-title"><span class="color-legend" style="background:#fff"></span>Belum terisi</label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox2">
-                                        <label for="checkbox2" id="label2" class="legend-title"><span class="color-legend" style="background:#ecff0f"></span>Pemanasan<span class="order"></span></label>
+                                        <input type="radio" id="checkbox2" name="legend-input">
+                                        <label for="checkbox2" id="label2" class="legend-title"><span class="color-legend" style="background:#ecff0f"></span>Pemanasan</label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox3">
-                                        <label for="checkbox3" id="label3" class="legend-title"><span class="color-legend" style="background:#2be172"></span>Pemasakan<span class="order"></span></label>
+                                        <input type="radio" id="checkbox3" name="legend-input">
+                                        <label for="checkbox3" id="label3" class="legend-title"><span class="color-legend" style="background:#2be172"></span>Pemasakan</label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox4">
-                                        <label for="checkbox4" id="label4" class="legend-title"><span class="color-legend" style="background:#39e8f8"></span>15 Menit pemasakan berakhir<span class="order"></span></label>
+                                        <input type="radio" id="checkbox4" name="legend-input">
+                                        <label for="checkbox4" id="label4" class="legend-title"><span class="color-legend" style="background:#39e8f8"></span>15 Menit pemasakan berakhir</label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox5">
-                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#e10200"></span>Terjadi error<span class="order"></span></label>
+                                        <input type="radio" id="checkbox5" name="legend-input">
+                                        <label for="checkbox5" id="label5" class="legend-title"><span class="color-legend" style="background:#e10200"></span>COMM error</label>
                                     </div>
                                     <div class="legend-steambox">
-                                        <input type="checkbox" id="checkbox6">
-                                        <label for="checkbox6" id="label6" class="legend-title"><span class="color-legend" style="background:#894ddd"></span>Kendala produksi<span class="order"></span></label>
+                                        <input type="radio" id="checkbox6" name="legend-input">
+                                        <label for="checkbox6" id="label6" class="legend-title"><span class="color-legend" style="background:#894ddd"></span>Kendala produksi</label>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center"><span class="material-symbols-outlined">swap_vert</span></button>
@@ -104,7 +104,7 @@
                                                             library_add_check
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -140,7 +140,7 @@
                                                             library_add_check
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#" disabled>
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan" disabled>
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -238,19 +238,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#stopPemasakan">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#tambahWaktu">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -348,19 +348,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#stopPemasakan">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#tambahWaktu">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -459,19 +459,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#stopPemasakan">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#tambahWaktu">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -572,19 +572,19 @@
                                                         </table>
                                                     </td>
                                                     <td>
-                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#stopPemasakan">
                                                             Stop Pemasakan
                                                             <span class="material-symbols-outlined">
                                                             error
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#tambahWaktu">
                                                             Tambah Waktu
                                                             <span class="material-symbols-outlined">
                                                             more_time
                                                             </span>
                                                         </button>
-                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#">
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
                                                             Tambah Keterangan
                                                             <span class="material-symbols-outlined">
                                                             edit_document
@@ -594,6 +594,122 @@
                                                 </tr>
                                                 <tr>
                                                     <td colspan="4" class="produksi-comment">produksi : ada kebocoran di pintu, pintu tidak bisa dibuka</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="card p-0 shadow ">
+                                        <div class="card-body p-0">
+                                            <table class="table w-100 m-0">
+                                                <tr>
+                                                    <th style="width:15%">No. Steambox</th>
+                                                    <th style="width:35%">Detail Produk</th>
+                                                    <th style="width:30%">Detail Proses</th>
+                                                    <th style="width:20%">Button Aksi</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="number-pemasakan bg-pemasakan">12</div>
+                                                        <table class="w-100">
+                                                            <tr>
+                                                                <td>Suhu Awal</td>
+                                                                <td>92 C</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Suhu Aktual</td>
+                                                                <td>92 C</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" class="font-weight-bold text-red text-center text-error">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <table class="w-100">
+                                                            <tr>
+                                                                <td class="text-center">Surya Bintang Kancing Mitra Gondang Legi Kerep</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Batch 1 / Merah / 90 Gelondong</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Batch 2 / Putih / 10 Gelondong</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+                                                        <table class="w-100">
+                                                            <tr>
+                                                                <th style="width:25%">Versi Resep</th>
+                                                                <th style="width:25%">Jenis Troli</th>
+                                                                <th style="width:50%">Kode Resep</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">3</td>
+                                                                <td class="text-center">Longgar</td>
+                                                                <td class="text-center">KCSURYA KNG LBR</td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <table class="table table-striped">
+                                                            <tr>
+                                                                <td>Jam Mulai</td>
+                                                                <td class="text-right">10:30:50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Durasi Pemanasan</td>
+                                                                <td class="text-right">00:20:50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Jam Pemasakan</td>
+                                                                <td class="text-right">10:50:50</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Durasi Pemasakan</td>
+                                                                <td class="text-right">01:15:00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Tambahan Waktu</td>
+                                                                <td class="text-right">+ 00:02:00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Jam Selesai</td>
+                                                                <td class="text-right">
+                                                                    <div class="d-flex justify-content-between w-100 align-items-center"><i class="fa fa-flag text-green"></i>12:07:50</div>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-primary btn-red" data-toggle="modal" data-target="#stopPemasakan">
+                                                            Stop Pemasakan
+                                                            <span class="material-symbols-outlined">
+                                                            error
+                                                            </span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary btn-blue" data-toggle="modal" data-target="#tambahWaktu">
+                                                            Tambah Waktu
+                                                            <span class="material-symbols-outlined">
+                                                            more_time
+                                                            </span>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary btn-yellow" data-toggle="modal" data-target="#tambahKeterangan">
+                                                            Tambah Keterangan
+                                                            <span class="material-symbols-outlined">
+                                                            edit_document
+                                                            </span>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="produksi-comment">produksi : ada kebocoran di pintu, pintu tidak bisa dibuka</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="maintenance-alert py-2 bg-red text-white" colspan="4">maintenance : mesin tidak dapat digunakan karena seal bocor</td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -783,20 +899,174 @@
 
 <!-- Modal Keterngan -->
 <div class="modal fade" id="tambahKeterangan" tabindex="-1" role="dialog" aria-labelledby="tambahKeteranganLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" style="width:350px">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="tambahKeteranganLabel">Tambah Keterangan</h5>
+      <div class="modal-header text-center pt-1" style="border-bottom:0;padding-bottom:0">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        Isi popup akan ditampilkan di sini...
+        <h5 class="modal-title text-center mb-4" id="tambahKeteranganLabel">Steambox 1</h5>
+        <form action="">
+            <div class="">
+                <label for="" class="mb-1 text-gray-700">Tambah keterangan:</label>
+                <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
+            </div>
+            <div class="mt-5">    
+                <button type="button" class="btn btn-primary btn-yellow w-100 mb-2">Tambah Keterangan</button> 
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            </div>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Add Warna-->
+<div class="modal fade" id="tambahWarna" tabindex="-1" role="dialog" aria-labelledby="tambahWarnaLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width:450px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tambahWarnaLabel">Add warna</h5>
+        <div class="text-gray-900">Input warna pada tempat yang telah disediakan</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+            <div id="list-warnainput">
+                <div class="mb-3">
+                    <label for="" class="mb-1 text-gray-700">Jenis warna</label>
+                    <div class="d-flex">
+                        <input type="text" id="tambahwaktu" name="tambahwaktu" class=" form-control" placeholder="">
+                        <span class="remove-button ml-2" style="opacity:0"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex pt-4 justify-content-between">
+                <button id="addButton" class="btn btn-primary" type="button" ><span class="material-symbols-outlined mr-1">add_box</span>Add input</button>
+                <div class="d-flex">    
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> 
+                    <button type="button" class="btn btn-primary btn-blue ml-2">Save</button>   
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add Warna-->
+<div class="modal fade" id="listWarna" tabindex="-1" role="dialog" aria-labelledby="listWarnaLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width:450px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="listWarnaLabel">List warna</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="search-form mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control bg-light bg-white small" placeholder="Search warna, contoh: merah putih" aria-label="Search" aria-describedby="basic-addon2" fdprocessedid="g8xacu">
+                
+                <button class="btn btn-primary" type="button" fdprocessedid="51r28">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </form>
+        <div id="list-warna">
+            <table class="table mb-0">
+                <tr>
+                    <th style="width:14%">No</th>
+                    <th>Jenis Warna</th>
+                    <th style="width:17%">Aksi</th>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>merah</td>
+                    <td class="text-center"><button class="btn btn-secondary px-2"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td>merah putih</td>
+                    <td class="text-center"><button class="btn btn-secondary px-2"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td>hijau</td>
+                    <td class="text-center"><button class="btn btn-secondary px-2"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">4</td>
+                    <td>hijau kuning</td>
+                    <td class="text-center"><button class="btn btn-secondary px-2"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td>hijau putih</td>
+                    <td class="text-center"><button class="btn btn-secondary px-2"><span class="material-symbols-outlined">delete</span></button></td>
+                </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tambah Waktu -->
+<div class="modal fade" id="tambahWaktu" tabindex="-1" role="dialog" aria-labelledby="tambahWaktuLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width:350px">
+    <div class="modal-content">
+      <div class="modal-header text-center pt-1" style="border-bottom:0;padding-bottom:0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="modal-title text-center mb-4" id="tambahWaktuLabel">Steambox 1</h5>
+        <form action="">
+            <div class="">
+                <label for="" class="mb-1 text-gray-700">Tambahan waktu:</label>
+                <div class="input-group mb-3">
+                    <input type="text" id="tambahwaktu" name="tambahwaktu" class=" form-control" placeholder="">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">menit</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-3">    
+                <button type="button" class="btn btn-primary btn-blue w-100 mb-2">Tambah Waktu</button> 
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Stop Pemasakan -->
+<div class="modal fade" id="stopPemasakan" tabindex="-1" role="dialog" aria-labelledby="stopPemasakanLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="width:350px">
+    <div class="modal-content">
+      <div class="modal-header text-center pt-1" style="border-bottom:0;padding-bottom:0">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 class="modal-title text-center mb-4" id="stopPemasakanLabel">Steambox 1</h5>
+        <form action="">
+            <div class="font-weight-semibold text-gray-900 text-center">Apakah Anda yakin menghentikan operasi pada mesin ini?</div>
+            <div class="mt-5">    
+                <button type="button" class="btn btn-primary btn-red w-100 mb-2">STOP</button> 
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            </div>
+        </form>
       </div>
     </div>
   </div>
@@ -1142,38 +1412,50 @@
 		);
 		event.preventDefault(); // Menghentikan default behavior tombol tambah
 	});
-			
-	var checkboxes = document.querySelectorAll('input[type=checkbox]');
-	var checkedOrder = [];
 
-	checkboxes.forEach(function(checkbox, index) {
-		var label = document.getElementById('label' + (index + 1));
-		var orderSpan = label.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label
-		
-		checkbox.addEventListener('change', function() {
-			if (checkbox.checked) {
-				if (!checkedOrder.includes(index)) {
-					checkedOrder.push(index);
-				}
-			} else {
-				var position = checkedOrder.indexOf(index);
-				if (position !== -1) {
-					checkedOrder.splice(position, 1);
-				}
-			}
-			
-			// Perbarui urutan di dalam span
-			checkedOrder.forEach(function(checkedIndex, order) {
-				var checkedLabel = document.getElementById('label' + (checkedIndex + 1));
-				var checkedOrderSpan = checkedLabel.querySelector('.order'); // Ambil elemen span dengan kelas order di dalam label yang dicentang
-				checkedOrderSpan.textContent = order + 1;
-			});
-			
-			// Perbarui urutan di dalam span jika kotak centang diklik
-			orderSpan.textContent = checkbox.checked ? checkedOrder.indexOf(index) + 1 : '';
-		});
-	});
+    //tambah inputan warna
+    document.addEventListener("DOMContentLoaded", function() {
+        const wrapper = document.getElementById('list-warnainput');
+        const addButton = document.getElementById('addButton');
+        let counter = 2; // Untuk menyimpan angka urut
 
+        // Fungsi untuk menambahkan elemen baru
+        function addElement() {
+            const div = document.createElement('div');
+            div.className = 'mb-3';
+
+            const label = document.createElement('label');
+            label.className = 'mb-1 text-gray-700';
+            label.textContent = 'Jenis warna';
+
+            const inputGroup = document.createElement('div');
+            inputGroup.className = 'd-flex';
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.className = 'form-control';
+            input.placeholder = '';
+
+            const removeButton = document.createElement('span');
+            removeButton.className = 'remove-button ml-2';
+            removeButton.innerHTML = '<span class="material-symbols-outlined">close</span>';
+            removeButton.addEventListener('click', function() {
+                div.remove(); // Menghapus elemen ketika tombol hapus diklik
+            });
+
+            inputGroup.appendChild(input);
+            inputGroup.appendChild(removeButton);
+
+            div.appendChild(label);
+            div.appendChild(inputGroup);
+
+            wrapper.appendChild(div);
+
+            counter++; // Meningkatkan angka urut setiap kali elemen ditambahkan
+        }
+
+        addButton.addEventListener('click', addElement);
+    });
 </script>
 
 @include('footer')

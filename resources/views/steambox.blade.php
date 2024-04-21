@@ -63,7 +63,7 @@
                             </div>
                             <div class="row data-steambox mt-4">
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">01</div>
@@ -136,7 +136,7 @@
                                 </div>
                                 
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">08</div>
@@ -208,7 +208,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">14</div>
@@ -281,7 +281,7 @@
                                 </div>
                                 
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">21</div>
@@ -354,7 +354,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">03</div>
@@ -426,7 +426,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow error">
+                                    <div class="card p-0 shadow error active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">09</div>
@@ -498,7 +498,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-3 col-lg-2">
-                                    <div class="card p-0 shadow">
+                                    <div class="card p-0 shadow active">
                                         <div class="card-body p-0">
                                             <div class="d-flex justify-content-between px-1 py-1">
                                                 <div class="number-steambox">19</div>

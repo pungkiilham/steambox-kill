@@ -55,11 +55,12 @@
                                                         <th rowspan="2" style="min-width:35px !important">No.</th>
                                                         <th rowspan="2" style="width:10%">SKU</th>
                                                         <th rowspan="2" style="width:25%">Nama Resep</th>
+                                                        <th rowspan="2">Edit Resep</th>
                                                         <th rowspan="2">Versi</th>
-                                                        <th rowspan="2">Ket Versi</th>
+                                                        <th rowspan="2">Edit Versi</th>
+                                                        <th rowspan="2">Std gld /Batch</th>
                                                         <th colspan="5">Max qty trolli (gelondong)</th>
                                                         <th colspan="3">Standar waktu masuk (menit)</th>
-                                                        <th rowspan="2">Aksi produk</th>
                                                     </tr>
                                                     <tr>
                                                         <th>flip</th>
@@ -75,14 +76,20 @@
                                                 <tbody class="text-center">
                                                     <tr class="row-parent">
                                                         <td rowspan="5" class="text-center text-gray-900">1</td>
-                                                        <td rowspan="5" class="text-left text-gray-900">SBK</td>
-                                                        <td rowspan="5" class="text-left text-gray-900">Surya Bintang Kancing</td>
+                                                        <td rowspan="5" class="text-gray-900">SBK</td>
+                                                        <td rowspan="5" class="text-gray-900">Surya Bintang Kancing</td>
+                                                        <td rowspan="5" class="text-nowrap">
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
+                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
+                                                        </td>
                                                         <td class="text-gray-900">1</td>
                                                         <td class="text-nowrap">
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">edit_document</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -91,11 +98,6 @@
                                                         <td>120</td>
                                                         <td>119</td>
                                                         <td>121</td>
-                                                        <td rowspan="5" class="text-nowrap">
-                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
-                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
-                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
-                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-gray-900">2</td>
@@ -104,6 +106,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -120,6 +123,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -136,6 +140,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -152,6 +157,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -163,14 +169,20 @@
                                                     </tr>
                                                     <tr class="row-parent">
                                                         <td rowspan="3" class="text-center text-gray-900">2</td>
-                                                        <td rowspan="3" class="text-left text-gray-900">SBKG</td>
-                                                        <td rowspan="3" class="text-left text-gray-900">Surya Bintang Kancing Gondang</td>
+                                                        <td rowspan="3" class="text-gray-900">SBKG</td>
+                                                        <td rowspan="3" class="text-gray-900">Surya Bintang Kancing Gondang</td>
+                                                        <td rowspan="3" class="text-nowrap">
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
+                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
+                                                        </td>
                                                         <td class="text-gray-900">1</td>
                                                         <td class="text-nowrap">
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">edit_document</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -179,11 +191,6 @@
                                                         <td>120</td>
                                                         <td>119</td>
                                                         <td>121</td>
-                                                        <td rowspan="3" class="text-nowrap">
-                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
-                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
-                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
-                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-gray-900">2</td>
@@ -192,6 +199,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -208,6 +216,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -219,14 +228,20 @@
                                                     </tr>
                                                     <tr class="row-parent">
                                                         <td rowspan="4" class="text-center text-gray-900">3</td>
-                                                        <td rowspan="4" class="text-left text-gray-900">SAEUK SKCL</td>
-                                                        <td rowspan="4" class="text-left text-gray-900">Saek Kancing Cerme Lebar</td>
+                                                        <td rowspan="4" class="text-gray-900">SAEUK SKCL</td>
+                                                        <td rowspan="4" class="text-gray-900">Saek Kancing Cerme Lebar</td>
+                                                        <td rowspan="4" class="text-nowrap">
+                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
+                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
+                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
+                                                        </td>
                                                         <td class="text-gray-900">1</td>
                                                         <td class="text-nowrap">
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">edit_document</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -235,11 +250,6 @@
                                                         <td>120</td>
                                                         <td>119</td>
                                                         <td>121</td>
-                                                        <td rowspan="4" class="text-nowrap">
-                                                            <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#editResep"><span class="material-symbols-outlined">edit_square</span></button>
-                                                            <button type="button" class="btn btn-red px-2 text-white btn-action" data-toggle="modal" data-target="#hapusResep"><span class="material-symbols-outlined">delete</span></button>
-                                                            <button type="button" class="btn btn-green px-2 text-white btn-action" data-toggle="modal" data-target="#tambahVersiModal"><span class="material-symbols-outlined">library_add</span></button>
-                                                        </td>
                                                     </tr>
                                                     <tr>
                                                         <td class="text-gray-900">2</td>
@@ -248,6 +258,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -264,6 +275,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
@@ -280,6 +292,7 @@
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">visibility</span></a>
                                                             <a href="" class="btn bg-gray-200 px-2 py-1"><span class="material-symbols-outlined">delete</span></a>
                                                         </td>
+                                                        <td>25</td>
                                                         <td>50</td>
                                                         <td>100</td>
                                                         <td>50</td>
