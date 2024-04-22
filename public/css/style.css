@@ -129,6 +129,8 @@ table.table-data-operator tr.alert:nth-child(3) .countdown{
   position: relative;
   border-right: 1px solid #ccc;
   padding: 0px 8px;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .legend-box input:checked ~ label{
@@ -300,7 +302,7 @@ span.select2-search.select2-search--dropdown:before {
   border-radius: 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) !important;
   margin-bottom: 6px;
-  background: #f7f7f7;
+  background: #ddd;
 }
 .data-steambox td:nth-child(2){
   padding-left: 5px;
@@ -1217,4 +1219,78 @@ button#downloadPdf.active {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+
+/*LOGIN*/
+#login-page form.user .form-control-user {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 8px 16px;
+  height: auto;
+}
+#login-page form.user .btn-user {
+  font-size: 12pt;
+  border-radius: 5px;
+  padding: 10px 10px;
+  background: #0e0e0e;
+  font-weight: 600;
+}
+img.logo-login {
+  height: 35px;
+}
+.header-login {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px 0 20px;
+  top: 20px;
+}
+a.btn-help i {
+  background: #000;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 7pt;
+  margin-right:3px ;
+}
+a.btn-help {
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+div#lupaPassword h2 {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+div#lupaPassword .modal-dialog {
+  max-width: 400px;
+}
+div#lupaPassword .modal-content {
+  border: 0;
+  padding: 10px;
+  border-radius: 20px;
+}
+div#lupaPassword .btn {
+  width: 140px;
+  border-radius: 3px;
+  background: #000;
+  margin-top: 20px;
+}
+body#login-page .btn-action {
+  background: transparent !important;
+  border: 0;
+  font-size: 13px;
+  padding: 0;
+  color: #1c9ec5 !important;
+}
+div#lupaPassword img {
+  max-width: 100%;
+  width: 200px;
 }
