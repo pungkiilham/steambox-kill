@@ -813,7 +813,7 @@
                         </div>
                         <div class="col-12 col-sm-2">
                             <label for="" class="mb-1 text-nowrap text-gray-700">Jmlh Gelondong</label>
-                            <input type="number" class="gelondong-input form-control" name="gelondong[]" /><span class="error-message"></span>
+                            <input type="number" class="gelondong-input form-control" name="gelondong[]" /><span class="error-message">sisa: 40 gldng</span>
                         </div>
                     </div>
                 </div>
@@ -1276,25 +1276,31 @@
 		// Validasi input Nama
 		if (name === "") {
 			document.getElementById("nameError").textContent = "isi resep";
+            document.getElementById("resepList").classList.add("error-input"); // Tambahkan kelas error-input
 			error = true;
 		} else {
 			document.getElementById("nameError").textContent = "";
+            document.getElementById("resepList").classList.remove("error-input"); // Hapus kelas error-input jika tidak ada kesalahan
 		}
 
 		// Validasi input Email
 		if (email === "") {
 			document.getElementById("versiError").textContent = "isi versi";
+            document.getElementById("versi").classList.add("error-input"); // Tambahkan kelas error-input
 			error = true;
 		} else {
 			document.getElementById("versiError").textContent = "";
+            document.getElementById("versi").classList.remove("error-input"); // Hapus kelas error-input jika tidak ada kesalahan
 		}
 
 		// Validasi input Pesan
 		if (message === "") {
 			document.getElementById("trolliError").textContent = "isi troli";
+            document.getElementById("trolli").classList.add("error-input"); // Tambahkan kelas error-input
 			error = true;
 		} else {
 			document.getElementById("trolliError").textContent = "";
+            document.getElementById("trolli").classList.remove("error-input"); // Hapus kelas error-input jika tidak ada kesalahan
 		}
 
 		// Validasi input hasil dari addRow
@@ -1306,8 +1312,10 @@
 			if (input.value.trim() === "") {
 				error = true;
 				input.parentElement.querySelector(".error-message").textContent = "isi batch";
+                input.classList.add("error-input");
 			} else {
 				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+                input.classList.remove("error-input");
 			}
 		});
 
@@ -1315,8 +1323,10 @@
 			if (input.value.trim() === "") {
 				error = true;
 				input.parentElement.querySelector(".error-message").textContent = "isi gelondong";
+                input.classList.add("error-input");
 			} else {
 				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+                input.classList.remove("error-input");
 			}
 		});
 
@@ -1324,8 +1334,10 @@
 			if (input.value.trim() === "") {
 				error = true;
 				input.parentElement.querySelector(".error-message").textContent = "isi warna";
+                input.classList.add("error-input");
 			} else {
 				clearErrorMessage(input); // Panggil fungsi untuk menghapus pesan error jika input sudah terisi
+                input.classList.remove("error-input");
 			}
 		});
 

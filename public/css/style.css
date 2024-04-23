@@ -1294,3 +1294,9 @@ div#lupaPassword img {
   max-width: 100%;
   width: 200px;
 }
+.error-input {
+  border-color: red; 
+}
+select#resepList.error-input ~ .select2-container--default .select2-selection--single{
+  border-color: red; 
+}
