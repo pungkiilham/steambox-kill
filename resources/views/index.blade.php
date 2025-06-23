@@ -40,35 +40,35 @@
                             <tbody class="text-center">
                                 <tr>
                                     <td>17</td>
-                                    <td class="nama-resep">KCSURYA KNG LBR</td>
+                                    <td class="nama-resep">Surya Bintang Gondang Kecil Kuning Trial</td>
                                     <td>15:53:40</td>
                                     <td class="countdown" data-finish-time="15:53:40"></td>
                                 </tr>
                                 <tr>
                                     <td>18</td>
-                                    <td class="nama-resep">KCSURYA KNG LBR</td>
+                                    <td class="nama-resep">Surya Bintang Gondang Besar Merah Putih</td>
                                     <td>15:55:00</td>
                                     <td class="countdown" data-finish-time="18:13:20"></td>
                                 </tr>
                                 <tr>
                                     <td>29</td>
-                                    <td class="nama-resep">KCSURYA KNG LBR</td>
+                                    <td class="nama-resep">Surya Bintang Gondang Besar Merah Putih</td>
                                     <td>16:30:00</td>
                                     <td class="countdown" data-finish-time="19:50:00"></td>
                                 </tr>
                                 <tr>
                                     <td>29</td>
-                                    <td class="nama-resep">KCSURYA KNG LBR</td>
+                                    <td class="nama-resep">Surya Bintang Gondang Besar Merah Putih</td>
                                     <td>23:10:00</td>
                                     <td class="countdown" data-finish-time="23:10:00"></td>
                                 </tr>
                                 <tr>
                                     <td>29</td>
-                                    <td class="nama-resep">KCSURYA KNG LBR</td>
+                                    <td class="nama-resep">Surya Bintang Gondang Trial</td>
                                     <td>23:50:00</td>
                                     <td class="countdown" data-finish-time="23:50:00"></td>
                                 </tr>
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -78,7 +78,7 @@
 
             <!-- Content Row -->
 
-           
+
 
         </div>
         <!-- /.container-fluid -->

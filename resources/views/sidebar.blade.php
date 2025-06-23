@@ -45,6 +45,12 @@
         <span>Log Maintenance</span>
     </a>
 </li>
+<li class="nav-item mb-2" id="logkill-menu">
+    <a class="nav-link" href="{{ url('/logkill') }}">
+        <span class="material-symbols-outlined">power_off</span>
+        <span>Log Kill Switch</span>
+    </a>
+</li>
 <li class="nav-item mb-2" id="logaktivitas-menu">
     <a class="nav-link" href="{{ url('/logaktivitas') }}">
         <span class="material-symbols-outlined">group</span>

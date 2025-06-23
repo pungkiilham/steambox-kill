@@ -45,6 +45,15 @@ Route::get('/logdetail', function () {
     return view('logmaintenancedetail');
 });
 
+Route::get('/logkill', function () {
+    return view('logkill');
+});
+
+Route::get('/logkilldetail', function () {
+    return view('logkilldetail');
+});
+
+
 Route::get('/logaktivitas', function () {
     return view('logaktivitas');
 });

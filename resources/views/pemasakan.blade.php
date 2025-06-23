@@ -31,18 +31,23 @@
                                 <form class="search-form">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search Nomor Steambox" aria-label="Search" aria-describedby="basic-addon2">
-                                        
+
                                         <button class="btn btn-primary" type="button">
                                             <i class="fas fa-search fa-sm"></i>
                                         </button>
                                     </div>
                                 </form>
                                 <div class="d-flex align-items-center">
-                                    <div class="form-number d-flex align-items-center mr-2">
-                                        <label for="" class="mb-0 mr-2 font-weight-semibold text-gray-900">Standar Pemanasan (menit)</label>
+                                    <div class="form-number d-flex align-items-center mr-3">
+                                        <label for="" class="mb-0 mr-2 font-weight-semibold text-gray-900">Mulai Pemasakan (derajat)</label>
                                         <input type="text" class="form-control text-center font-weight-semibold text-gray-900" style="width:60px">
                                     </div>
                                     <button class="btn bg-white text-gray-700 py-1 shadow"><i class="fa fa-save"></i></button>
+                                    {{-- <div class="form-number d-flex align-items-center mr-2">
+                                        <label for="" class="mb-0 mr-2 font-weight-semibold text-gray-900">Standar Pemanasan (menit)</label>
+                                        <input type="text" class="form-control text-center font-weight-semibold text-gray-900" style="width:60px">
+                                    </div>
+                                    <button class="btn bg-white text-gray-700 py-1 shadow"><i class="fa fa-save"></i></button> --}}
                                     <div class="button-header ml-4">
                                         <button class="btn bg-white text-gray-600 py-1 shadow"  data-toggle="modal" data-target="#listWarna" type="button"><i class="fa fa-list"></i> List Warna</button>
                                         <button class="btn bg-white text-gray-600 py-1 shadow ml-1"  data-toggle="modal" data-target="#tambahWarna" type="button"><i class="fa fa-plus"></i> Add Warna</button>
@@ -78,7 +83,7 @@
                                 </div>
                                 <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center"><span class="material-symbols-outlined">swap_vert</span></button>
                                 <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center"><span class="material-symbols-outlined">refresh</span></button>
-                                
+
                             </div>
                             <div class="row data-pemasakan mt-4">
                                 <div class="col-12 col-sm-12">
@@ -372,7 +377,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-12 col-sm-12">
                                     <div class="card p-0 shadow comm-error">
                                         <div class="card-body p-0">
@@ -723,7 +728,7 @@
 
             <!-- Content Row -->
 
-           
+
 
         </div>
         <!-- /.container-fluid -->
@@ -913,9 +918,9 @@
                 <label for="" class="mb-1 text-gray-700">Tambah keterangan:</label>
                 <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
             </div>
-            <div class="mt-5">    
-                <button type="button" class="btn btn-primary btn-yellow w-100 mb-2">Tambah Keterangan</button> 
-                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            <div class="mt-5">
+                <button type="button" class="btn btn-primary btn-yellow w-100 mb-2">Tambah Keterangan</button>
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>
             </div>
         </form>
       </div>
@@ -948,9 +953,9 @@
             </div>
             <div class="d-flex pt-4 justify-content-between">
                 <button id="addButton" class="btn btn-primary" type="button" ><span class="material-symbols-outlined mr-1">add_box</span>Add input</button>
-                <div class="d-flex">    
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> 
-                    <button type="button" class="btn btn-primary btn-blue ml-2">Save</button>   
+                <div class="d-flex">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary btn-blue ml-2">Save</button>
                 </div>
             </div>
         </form>
@@ -973,7 +978,7 @@
         <form class="search-form mb-3">
             <div class="input-group">
                 <input type="text" class="form-control bg-light bg-white small" placeholder="Search warna, contoh: merah putih" aria-label="Search" aria-describedby="basic-addon2" fdprocessedid="g8xacu">
-                
+
                 <button class="btn btn-primary" type="button" fdprocessedid="51r28">
                     <i class="fas fa-search fa-sm"></i>
                 </button>
@@ -1039,9 +1044,9 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-4 pt-3">    
-                <button type="button" class="btn btn-primary btn-blue w-100 mb-2">Tambah Waktu</button> 
-                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            <div class="mt-4 pt-3">
+                <button type="button" class="btn btn-primary btn-blue w-100 mb-2">Tambah Waktu</button>
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>
             </div>
         </form>
       </div>
@@ -1062,9 +1067,9 @@
         <h5 class="modal-title text-center mb-4" id="stopPemasakanLabel">Steambox 1</h5>
         <form action="">
             <div class="font-weight-semibold text-gray-900 text-center">Apakah Anda yakin menghentikan operasi pada mesin ini?</div>
-            <div class="mt-5">    
-                <button type="button" class="btn btn-primary btn-red w-100 mb-2">STOP</button> 
-                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>   
+            <div class="mt-5">
+                <button type="button" class="btn btn-primary btn-red w-100 mb-2">STOP</button>
+                <button type="button" class="btn btn-secondary w-100" data-dismiss="modal">Cancel</button>
             </div>
         </form>
       </div>
@@ -1075,7 +1080,7 @@
 <script>
 
 	$('#pemasakan-menu').addClass('active');
-	
+
 	$(document).ready(function() {
 		$('#resepList').select2();
 
@@ -1093,7 +1098,7 @@
 		modalMessage.innerHTML = message;
 		modal.style.display = "block";
 		modal.classList.add("show");
-		
+
 		// Menutup modal popup saat tombol close diklik
 		var closeBtn = modal.querySelector(".close");
 		closeBtn.onclick = function() {
@@ -1124,7 +1129,7 @@
 			checkInputFilled(input); // Panggil fungsi untuk memeriksa apakah input sudah diisi
 		});
 	});
-	
+
 	function addRow() {
 		var rowCount = document.querySelectorAll("#produk-add .produk-row").length;
 		var newRow = document.createElement("div");
@@ -1223,7 +1228,7 @@
 
 		// Menambahkan baris baru ke dalam kontainer
 		document.getElementById("produk-add").appendChild(newRow);
-		
+
 		// Menambahkan event listener untuk memeriksa input saat berubah pada baris baru
 		newRow.querySelectorAll(".batch-input, .gelondong-input, .warna-input").forEach(function (input) {
 			input.addEventListener("input", function () {
@@ -1259,8 +1264,8 @@
 	  event.preventDefault(); // Menghentikan default behavior tombol tambah
 	//   deleteLastRow();
 	});
-	
-	
+
+
 	// Fungsi untuk menghapus pesan error jika input sudah terisi
 	function clearErrorMessage(input) {
 		var errorMessage = input.parentElement.querySelector(".error-message");
@@ -1389,7 +1394,7 @@
 		modalMessage.innerHTML = message;
 		modal.style.display = "block";
 		modal.classList.add("show");
-		
+
 		// Menutup modal popup saat tombol close diklik
 		var closeBtn = modal.querySelector(".close");
 		closeBtn.onclick = function() {
@@ -1403,21 +1408,21 @@
 		}
 		};
 	}
-	
+
 	document.getElementById("sisaGelondongButton").addEventListener("click", function(event) {
 		showWarningModal(
 		'<p class="text-center">Terdapat sisa "20 gelondong" <br/>Apakah anda yakin tetap ingin memproses ini?</p><ul><li>jika "YA" maka sisa gelondong akan digunakan pada proses berikutnya yang menggunakan resep dan warna yang sama dengan proses ini.</li><li> jika "TIDAK" maka input gelondong sampai jumlahnya sama dengan batas max trolli yang dipilih.</li></ul>'
 		);
 		event.preventDefault(); // Menghentikan default behavior tombol tambah
 	});
-		
+
 	document.getElementById("kelebihanGelondongButton").addEventListener("click", function(event) {
 		showWarningModal(
 		'<p class="text-center">Hari ini, ada sisa gelondong di batch sebelumnya dengan data</p><table class="table"><tr><td>resep</td><td>Surya Bintang Kancing Mitra Gondang Legi</td></tr><tr><td>versi</td><td>3</td></tr><tr><td>trolli</td><td>flip</td></tr><tr><td>warna</td><td>merah</td></tr><tr><td>batch</td><td>1</td></tr><tr><td>jmlh sisa gld</td><td>140</td></tr></table><p class="text-center">Apakah anda ingin melanjutkan sisa batch 1 : 40 gelondong?</p>'
 		);
 		event.preventDefault(); // Menghentikan default behavior tombol tambah
 	});
-		
+
 	document.getElementById("batchTerpakaiButton").addEventListener("click", function(event) {
 		showWarningModal(
 		'<p class="text-center">Batch sudah terpakai dalam proses pemasakan, <br/>tidak ada sisa gelondong.</p><p class="text-center">Batch akan terganti otomatis dengan batch berikutnya.</p>'

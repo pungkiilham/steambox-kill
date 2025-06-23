@@ -46,7 +46,7 @@ div#current-time span { /* JAM ACTUAL */
   min-width: 6.9vw;
 }
 table.table-data-operator td.nama-resep {
-  font-size: 1.4vw;
+  font-size: 2vw;
   font-weight: 500;
 }
 table.table-data-operator th { /* TB HEADER */
@@ -866,7 +866,7 @@ table.defaultTable th {
   overflow: hidden;
   background: #fff;
   overflow-x: auto;
-} 
+}
 .data-resep .card-body {
   padding: 0;
 }
@@ -891,7 +891,7 @@ table#resepTable .row-parent td:nth-child(1),table#resepTable .row-parent td:nth
 }
 table#resepTable .row-parent td:nth-child(2),table#resepTable .row-parent td:nth-child(3){
   padding-left: 15px;
-  
+
 }
 body#resep-page .search-form input,
 body#logproduksi-page .search-form input {
@@ -1295,8 +1295,8 @@ div#lupaPassword img {
   width: 200px;
 }
 .error-input {
-  border-color: red; 
+  border-color: red;
 }
 select#resepList.error-input ~ .select2-container--default .select2-selection--single{
-  border-color: red; 
+  border-color: red;
 }

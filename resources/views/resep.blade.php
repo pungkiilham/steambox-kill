@@ -31,13 +31,18 @@
                                 <form class="search-form">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small" placeholder="Search Resep" aria-label="Search" aria-describedby="basic-addon2">
-                                        
+
                                         <button class="btn btn-primary" type="button">
                                             <i class="fas fa-search fa-sm"></i>
                                         </button>
                                     </div>
                                 </form>
                                 <div class="d-flex align-items-center button-header bg-transparent px-0 py-0">
+                                    <div class="form-number d-flex align-items-center mr-2">
+                                        <label for="" class="mb-0 mr-2 font-weight-semibold text-gray-900">Standar Pemanasan (menit)</label>
+                                        <input type="text" class="form-control text-center font-weight-semibold text-gray-900" style="width:60px">
+                                    </div>
+                                    <button class="btn bg-white text-gray-700 py-1 shadow mr-4"><i class="fa fa-save"></i></button>
                                     <button class="btn bg-white text-gray-600 shadow"  data-toggle="modal" data-target="#tambahResep" type="button"><span class="material-symbols-outlined">assignment_add</span> Resep Baru</button>
                                     <button class="btn bg-white text-gray-600 shadow ml-3"  data-toggle="modal" data-target="#tambahTrolli" type="button"><span class="material-symbols-outlined">dns</span> Add Trolli</button>
                                 </div>
@@ -46,7 +51,7 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            
+
                                         <button type="button" class="btn btn-blue px-2 text-white btn-action" data-toggle="modal" data-target="#alertResep">alert popup</button>
                                             <div class="table-wrap">
                                             <table id="resepTable" class="defaultTable table" style="">
@@ -318,7 +323,7 @@
                                                     </ul>
                                                     </nav>
                                                 </div>
-                                                <div class="col-sm-3 col-12 text-right">Items perpage 
+                                                <div class="col-sm-3 col-12 text-right">Items perpage
                                                     <select name="" id="">
                                                         <option value="10">10</option>
                                                         <option value="25">25</option>
@@ -326,7 +331,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
                                 </div>
@@ -338,7 +343,7 @@
 
             <!-- Content Row -->
 
-           
+
 
         </div>
         <!-- /.container-fluid -->
@@ -646,9 +651,9 @@
 
 <script>
 
-	$('#resep-menu').addClass('active');	
+	$('#resep-menu').addClass('active');
 
-    
+
     let currentStep = 0;
     const steps = document.querySelectorAll(".step");
     const stepHeaders = document.querySelectorAll(".step-header li");
