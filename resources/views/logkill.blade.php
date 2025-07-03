@@ -42,33 +42,45 @@
                                                 </div>
                                             </form>
 
-                                            {{-- <form action="" class="d-flex align-items-center mr-4">
-                                                <div class="form-number d-flex align-items-center mr-2">
-                                                    <label for=""
-                                                        class="mb-0 mr-2 font-weight-semibold text-gray-900"
-                                                        style="line-height:1.2">Kill Switch</label>
+                                            <form action="" class="d-flex align-items-center mr-4">
+                                                <form action="" class="status-search d-flex">
                                                     <select name="" id="statusList" class="form-control mr-3">
-                                                        <option value="enable">Aktif</option>
-                                                        <option value="disable">Mati</option>
+                                                        <option value="">Pilih Status</option>
+                                                        <option value="normal">Semua</option>
+                                                        <option value="rusakbisajalan">Input Aktif</option>
+                                                        <option value="rusakbisajalan">Input Mati</option>
+                                                        <option value="rusakbisajalan">Output Aktif</option>
+                                                        <option value="rusakbisajalan">Output Mati</option>
+
                                                     </select>
-                                                </div> --}}
-                                            </form>
+                                                    <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center" type="button">
+                                                    <span class="material-symbols-outlined">refresh</span>
+                                                    </button>
+                                                </form>
                                         </div>
                                         <div class="d-flex">
                                             <div class="form-number d-flex align-items-center mr-4">
                                                 <label for=""
                                                     class="mb-0 mr-2 font-weight-semibold text-gray-900"
-                                                    style="line-height:1.2">Status Modul Kill Switch</label>
-                                                <button class="btn mr-2 btn-primary btn-green text-white py-1 shadow"
-                                                    fdprocessedid="ivd7uo"> Aktif</button>
-                                                <button class="btn btn-danger btn-red py-1 shadow"
+                                                    style="line-height:1.2">Status Modul</label>
+                                                {{-- <button class="btn mr-2 btn-primary btn-green text-white py-1 shadow" disabled
+                                                    fdprocessedid="ivd7uo"> Aktif</button> --}}
+                                                <button class="btn btn-danger btn-red py-1 shadow" disabled
                                                     fdprocessedid="ivd7uo"> Mati</button>
                                             </div>
                                             <form action="" class="d-flex align-items-center mr-4">
                                                 <div class="form-number d-flex align-items-center mr-2">
                                                     <label for=""
                                                         class="mb-0 mr-2 font-weight-semibold text-gray-900"
-                                                        style="line-height:1.2">Jeda Kill Switch (detik)</label>
+                                                        style="line-height:1.2">Jeda Start (detik)</label>
+                                                    <input type="text"
+                                                        class="form-control text-center font-weight-semibold text-gray-900"
+                                                        style="width:60px" fdprocessedid="fulggd">
+                                                </div>
+                                                <div class="form-number d-flex align-items-center mr-2">
+                                                    <label for=""
+                                                        class="mb-0 mr-2 font-weight-semibold text-gray-900"
+                                                        style="line-height:1.2">Jeda Kill (detik)</label>
                                                     <input type="text"
                                                         class="form-control text-center font-weight-semibold text-gray-900"
                                                         style="width:60px" fdprocessedid="fulggd">
@@ -115,7 +127,7 @@
                                                                     <td>23 <button
                                                                             class="btn btn-secondary bg-gray-200 text-gray-600 px-2 ml-2 border-dark"><span
                                                                                 class="material-symbols-outlined">cached</span></button>
-                                                                    <td>Ada kebocoran di pintu</td>
+                                                                    <td>SB Rusak dan tidak bisa jalan</td>
                                                                     <td><button
                                                                             class="btn mr-2 btn-primary btn-green text-white py-1 shadow">
                                                                             Aktif</button></td>
@@ -150,7 +162,7 @@
                                                                             class="btn btn-secondary bg-gray-200 text-gray-600 px-2 ml-2 border-dark"><span
                                                                                 class="material-symbols-outlined">cached</span></button>
                                                                     </td>
-                                                                    <td>Ada kebocoran di pintu</td>
+                                                                    <td>TK rusak - menunggu barang pengganti</td>
                                                                     <td>Aktif</td>
                                                                     <td>Mati</td>
                                                                     <td class="text-wrap">
