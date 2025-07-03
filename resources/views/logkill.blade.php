@@ -53,8 +53,10 @@
                                                         <option value="rusakbisajalan">Output Mati</option>
 
                                                     </select>
-                                                    <button class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center" type="button">
-                                                    <span class="material-symbols-outlined">refresh</span>
+                                                    <button
+                                                        class="btn btn-primary short-button bg-white shadow border-0 text-gray-700 d-flex align-items-center"
+                                                        type="button">
+                                                        <span class="material-symbols-outlined">refresh</span>
                                                     </button>
                                                 </form>
                                         </div>
@@ -131,9 +133,9 @@
                                                                     <td><button
                                                                             class="btn mr-2 btn-primary btn-green text-white py-1 shadow">
                                                                             Aktif</button></td>
-                                                                            <td><button
-                                                                                class="btn mr-2 btn-danger btn-red text-white py-1 shadow">
-                                                                                Mati</button></td>
+                                                                    <td><button
+                                                                            class="btn mr-2 btn-danger btn-red text-white py-1 shadow">
+                                                                            Mati</button></td>
                                                                     <td class="text-wrap">
                                                                         <button type="button"
                                                                             class="btn btn-primary btn-green"
@@ -163,8 +165,12 @@
                                                                                 class="material-symbols-outlined">cached</span></button>
                                                                     </td>
                                                                     <td>TK rusak - menunggu barang pengganti</td>
-                                                                    <td>Aktif</td>
-                                                                    <td>Mati</td>
+                                                                    <td><button
+                                                                            class="btn mr-2 btn-primary btn-green text-white py-1 shadow" disabled>
+                                                                            Aktif</button></td>
+                                                                    <td><button
+                                                                            class="btn mr-2 btn-danger btn-red text-white py-1 shadow" disabled>
+                                                                            Mati</button></td>
                                                                     <td class="text-wrap">
                                                                         <button type="button"
                                                                             class="btn btn-primary btn-green"
